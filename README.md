@@ -15,7 +15,7 @@ GitHub is based on the distributed version-control system [Git](https://en.wikip
    - Name the subfolder after the issue number (e.g., `/documents/42/`).
    - Create or edit a Markdown document explaining your idea /documents/42/0-main.md`).
    - Include metadata at the top: author, date, source issue.  
-3. Open a Pull Request to merge the file.  
+3. Open a Pull Request to merge the subfolder and its internal file.  
 
 ## How to contribute to an existing project
 1. Discuss and interact directly by commenting on an existing issue.
