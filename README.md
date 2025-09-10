@@ -1,8 +1,8 @@
-# The Polyquantum project
+# Polyquantum
 _Collaborative research in quantum science._
 
 ## About
-The _Polyquantum_ project is an experiment of collaborative research in the field of quantum science.
+_Polyquantum_ is an experiment of collaborative research in the field of quantum science.
 It is inspired by the successful [Polymath project](https://en.wikipedia.org/wiki/Polymath_Project) but, instead of being structured as a blog, it is hosted as a GitHub repository.
 The mission of the PolyQuantum project is to help share ideas and to stimulate collaborative research projects in quantum science.
 
