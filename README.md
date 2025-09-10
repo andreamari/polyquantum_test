@@ -10,7 +10,7 @@ The mission of the PolyQuantum project is to help share ideas and to stimulate c
 GitHub is based on the distributed version-control system [Git](https://en.wikipedia.org/wiki/Git) which, although specifically designed for developing software, is particularely convenient also for the aims of the Polyquantum. In a Git repository, the whole history of changes applied to any file is permanently tracked and recorded. This is a strong incentive for sharing ideas and collaborating in resaerch projects. Indeed, the fact that each contribution is public and permanently tracked helps to avoid plagiarism and misappropriations of intellectual property.
 
 ## How to create a new research project
-1. Open a new **issue** to propose a new research idea or a new problem.
+1. Open a new **issue** to share a new research idea or a new problem.
 2. Once refined, create a subfolder in `/documents/` folder.  
    - Name the subfolder after the issue number (e.g., `/documents/42/`).
    - Create or edit a Markdown document explaining your idea (e.g., `/documents/42/0-main.md`).
