@@ -1,4 +1,4 @@
-# The PolyQuantum project
+# The Polyquantum project
 _Collaborative research in quantum science._
 
 ## About
