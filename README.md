@@ -7,7 +7,7 @@ It is inspired by the successful [Polymath project](https://en.wikipedia.org/wik
 The mission of the PolyQuantum project is to help share ideas and to stimulate collaborative research projects in quantum science.
 
 ## Why GitHub?
-GitHub is based on the distributed version-control system [Git](https://en.wikipedia.org/wiki/Git) which, although specifically designed for developing software, is particularely convenient also for the aims of the PolyQuantum project. In a Git repository, the whole history of changes applied to any file is permanently tracked and recorded. This is a strong incentive for sharing ideas and collaborating in resaerch projects. Indeed, the fact that each contribution is public and permanently tracked helps to avoid plagiarism and misappropriations of intellectual property.
+GitHub is based on the distributed version-control system [Git](https://en.wikipedia.org/wiki/Git) which, although specifically designed for developing software, is particularely convenient also for the aims of the Polyquantum. In a Git repository, the whole history of changes applied to any file is permanently tracked and recorded. This is a strong incentive for sharing ideas and collaborating in resaerch projects. Indeed, the fact that each contribution is public and permanently tracked helps to avoid plagiarism and misappropriations of intellectual property.
 
 ## How to create a new research project
 1. Open a new **issue** to propose a new research idea or a new problem.
