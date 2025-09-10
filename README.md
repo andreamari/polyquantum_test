@@ -18,13 +18,14 @@ GitHub is based on the distributed version-control system [Git](https://en.wikip
 3. Open a Pull Request to merge the subfolder and its internal file.  
 
 ## How to contribute to an existing project
-1. Discuss and interact directly by commenting on an existing issue.
+1. Go to the _Issues_ section and explore the list of all existing projects.
+1. Discuss and interact directly by commenting on a specific issue.
 2. Each time the discussion produces original material that is worth preserving (ideas, solutions, calculations, etc..), create or edit a Markdown document in the issue subfolder (e.g., `/documents/42/1-further_comments.md`).
 3. Open a Pull Request to merge the file.  
 
 ## Issues vs. Markdown files
 - **Issues** are for open brainstorming, discussions, and comments.  
-- **Markdown files** are for finalized ideas and serve as a permanent record.  
+- **Markdown files** are for finalized ideas and serve as a permanent record.
 
 ## Attribution
 4. After merging a `.md` document, your contribution and your authorship will be permanently preserved in Git history. This avoids plagiarism.
