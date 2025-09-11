@@ -3,11 +3,8 @@ _Collaborative research in quantum science._
 
 ## About
 _Polyquantum_ is an experiment of open collaborative research in the field of quantum science.
-In _Polyquantum_, you can share a new research idea or collaborate on an existing one. A unique feature of _Polyquantum_ is a transparent tracking of each scientific contribution based on [Git](https://en.wikipedia.org/wiki/Git), such that authorship will be permanently preserved in Git history. 
-It is inspired by the successful [Polymath project](https://en.wikipedia.org/wiki/Polymath_Project) but, instead of being structured as a [blog](https://polymathprojects.org/)), it is hosted as a GitHub repository.
-
-## Why GitHub?
-GitHub is based on the distributed version-control system [Git](https://en.wikipedia.org/wiki/Git) which, although specifically designed for developing software, is particularely convenient also for the aims of the Polyquantum. In a Git repository, the whole history of changes applied to any file is permanently tracked and recorded. This is a strong incentive for sharing ideas and collaborating in resaerch projects. Indeed, the fact that each contribution is public and permanently tracked helps to avoid plagiarism and misappropriations of intellectual property.
+In Polyquantum, you can share a new research idea or collaborate on an existing one. A unique feature of _Polyquantum_ is the transparent tracking of each scientific contribution based on [Git](https://en.wikipedia.org/wiki/Git), such that authorship will be permanently preserved in Git history. 
+The Polyquantum project is inspired by the successful [Polymath project](https://en.wikipedia.org/wiki/Polymath_Project) but, instead of being structured as a [blog](https://polymathprojects.org/)), it is hosted as a GitHub repository.
 
 ## How to create a new research project
 1. Open a new **issue** to share a new research idea or a new problem.
@@ -20,8 +17,8 @@ GitHub is based on the distributed version-control system [Git](https://en.wikip
 ## How to contribute to an existing project
 1. Go to the _Issues_ section and explore the list of all existing projects.
 1. Discuss and interact directly by commenting on a specific issue.
-2. Each time the discussion produces original material that is worth preserving (ideas, solutions, calculations, etc..), create or edit a Markdown document in the issue subfolder (e.g., `/documents/42/1-further_comments.md`).
-3. Open a Pull Request to merge the file.  
+2. Each time the discussion produces original material that is worth preserving (ideas, solutions, calculations, etc..), create or edit a Markdown document in the issue subfolder (e.g., `/documents/42/1-solution.md`, `/documents/42/2-alternative-solution.md`, _etc._).
+3. Open a Pull Request to merge your file.  
 
 ## Issues vs. Markdown files
 - **Issues** are for open brainstorming, discussions, and comments.  
