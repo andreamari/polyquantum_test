@@ -1,3 +1,5 @@
+## What is Polyquantum
+Polyquantum is an experiment of open collaborative research in the field of quantum science. In Polyquantum, you can publicly share a new research idea or collaborate on an existing one. A unique feature of Polyquantum is the transparent tracking of each scientific contribution, based on Git, ensuring that authorship of each step of the research process is permanently preserved in the Git history.
 
 ## Inspiration and name origin
 The Polyquantum project is inspired by the successful [Polymath project](https://en.wikipedia.org/wiki/Polymath_Project) by  [Timothy Gowers](https://en.wikipedia.org/wiki/Timothy_Gowers) and [Terence Tao](https://en.wikipedia.org/wiki/Terence_Tao). This explains the origin of the name _Polyquantum_. 
