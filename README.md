@@ -16,7 +16,7 @@ More details about Polyquantum can be found on the [ABOUT.md](ABOUT.md) page.
 3. Open a Pull Request to merge your file.
 
 ## How to share a new research idea
-1. Open a new **issue** to share a new research idea/problem/project.
+1. Open a [new *issue*](https://github.com/andreamari/polyquantum_test/issues/new/choose) to share a new research idea/problem/project.
 2. Create a subfolder in `/documents/` folder.  
    - Name the subfolder after the issue number (e.g., `/documents/42/`).
    - Create or edit a Markdown document explaining your idea (e.g., `/documents/42/0-main.md`).
