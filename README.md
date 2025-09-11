@@ -12,7 +12,7 @@ More details about Polyquantum can be found on the [ABOUT.md](ABOUT.md) page.
 ## How to explore and contribute to existing ideas
 1. Go to the [_Issues_ section](https://github.com/andreamari/polyquantum_test/issues) and explore the list of all existing projects.
 1. Discuss and interact directly by commenting on a specific issue.
-2. Each time the discussion produces original material that is worth preserving agains plagiarism (ideas, solutions, calculations, etc..), create or edit a Markdown document in the issue subfolder (e.g., `/documents/42/1-solution.md`, `/documents/42/2-alternative-solution.md`, _etc._).
+2. Each time the discussion produces original material that is worth preserving against potential plagiarism (ideas, solutions, calculations, etc..), create or edit a Markdown document in the issue subfolder (e.g., `/documents/42/1-solution.md`, `/documents/42/2-alternative-solution.md`, _etc._).
    - Name the file starting with a progressive number `#-` (e.g., `2-solution.md`, `3-alternative-solution`). This is to preserve a chronological ordering and to allow a compact reference convention: _Polyquantum 42.2 (2025)_ $\Leftrightarrow$ `/documents/42/2-alternative-solution.md`.
 4. Open a Pull Request to merge your file.
 
