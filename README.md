@@ -21,7 +21,8 @@ More details about Polyquantum can be found on the [ABOUT.md](ABOUT.md) page.
 2. Create a Markdown document explaining your idea (e.g., `/documents/42/1-idea.md`).
    - Name the subfolder after the issue number (e.g., `/documents/42/`).
    - Name the file starting with `1-` (e.g., `/documents/42/1-idea.md`) to indicate that this is the first document.
-   - Include metadata at the top: author, date, source issue.  
+   - Include metadata at the top: author, date, source issue.
+   - If necessary, the new research idea can be referenced in other research papers as _Polyquantum 42.1 (2025)_.
 3. Open a Pull Request to merge the new subfolder and its internal file.  
 
 ## Issues vs. Markdown files
