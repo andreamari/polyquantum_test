@@ -2,8 +2,11 @@
 _Collaborative research in quantum science, powered by Git._
 
 ## About
-_Polyquantum_ is an experiment of open collaborative research in the field of quantum science.
-In Polyquantum, you can publicly share a new research idea or collaborate on an existing one. A unique feature of _Polyquantum_ is the transparent tracking of each scientific contribution, based on [Git](https://en.wikipedia.org/wiki/Git), ensuring that authorship of each step of the research process is permanently preserved in the Git history. 
+Polyquantum is a platform, structured as a GitHub repository, for open collaborative research in the field of quantum science.
+In Polyquantum, users can openly share a new research idea or collaborate on research projects proposed by other users.
+A unique feature of _Polyquantum_ is the transparent tracking of each scientific contribution, ensuring that authorship of each step of the research process is permanently preserved in the [Git](https://en.wikipedia.org/wiki/Git) history. 
+
+More details about Polyquantum can be found on the [ABOUT.md](ABOUT.md) page.
 
 ## How to explore and contribute to existing ideas
 1. Go to the _Issues_ section and explore the list of all existing projects.
