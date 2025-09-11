@@ -10,7 +10,7 @@ A unique feature of Polyquantum is the transparent tracking of scientific contri
 More details about Polyquantum can be found on the [ABOUT.md](ABOUT.md) page.
 
 ## How to explore and contribute to existing ideas
-1. Go to the _Issues_ section and explore the list of all existing projects.
+1. Go to the [_Issues_ section](https://github.com/andreamari/polyquantum_test/issues) and explore the list of all existing projects.
 1. Discuss and interact directly by commenting on a specific issue.
 2. Each time the discussion produces original material that is worth preserving (ideas, solutions, calculations, etc..), create or edit a Markdown document in the issue subfolder (e.g., `/documents/42/1-solution.md`, `/documents/42/2-alternative-solution.md`, _etc._).
 3. Open a Pull Request to merge your file.
