@@ -21,3 +21,7 @@ The main differences between Polyquantum and Polymath are the following:
 The approach of Polyquantum is also clearly inspired by the methodologies and the tools of [open-source software](https://en.wikipedia.org/wiki/Open-source_software).
 Indeed, both GitHub and the underlying distributed version control system Git are state-of-the-art tools routinely used for open-source software develpment.
 The goal of Polyquantum is to apply the same methodologies and the same powerful tools that emerged in the field of open-source software into a different field: open scientific research.
+
+## Aknowledgemnts
+I acknowledge useful discussions with Nathan Shammah and Will Zeng about the early-stage idea of the Polyquantum project.
+The same idea was presented in 2023 as a lightning talk at [UnitaryCON 2023](https://unitary.foundation/community/2023/unitaryCON/).
