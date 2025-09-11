@@ -15,7 +15,7 @@ More details about Polyquantum can be found on the [ABOUT.md](ABOUT.md) page.
 2. Each time the discussion produces original material that is worth preserving and tracking (ideas, solutions, calculations, etc..), create or edit a Markdown document in the issue subfolder (e.g., `/documents/42/1-solution.md`, `/documents/42/2-alternative-solution.md`, _etc._).
    - Name the file starting with a progressive number `#-` (e.g., `2-solution.md`, `3-alternative-solution`). This creates a chronological ordering and permits a compact reference convention: _Polyquantum 42.2 (2025)_ $\Leftrightarrow$ `/documents/42/2-alternative-solution.md`.
    - The content of the document must start with two required fields: _Author(s)_ and _Affiliation(s)_.
-
+   - If necessary, the new document can be referenced in research papers as _Polyquantum 42.2 (2025)_ $\Leftrightarrow$ `/documents/42/2-alternative-solution.md`.
 
 4. Open a Pull Request to merge your file.
 
@@ -25,7 +25,7 @@ More details about Polyquantum can be found on the [ABOUT.md](ABOUT.md) page.
    - Name the subfolder after the issue number (e.g., `/documents/42/`).
    - Name the file starting with `1-` (e.g., `/documents/42/1-idea.md`) to indicate that this is the first document.
    - The content of the document must start with two required fields: _Author(s)_ and _Affiliation(s)_.
-   - If necessary, the new research idea can be referenced in other research papers as _Polyquantum 42.1 (2025)_.
+   - If necessary, the new research idea can be referenced in research papers as _Polyquantum 42.1 (2025)_.
 3. Open a Pull Request to merge the new subfolder and its internal file.  
 
 ## Issues vs. Markdown files
