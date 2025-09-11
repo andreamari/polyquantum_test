@@ -3,8 +3,8 @@ _Collaborative research in quantum science._
 
 ## About
 _Polyquantum_ is an experiment of collaborative research in the field of quantum science.
-It is inspired by the successful [Polymath project](https://en.wikipedia.org/wiki/Polymath_Project) but, instead of being structured as a blog, it is hosted as a GitHub repository.
-The mission of the PolyQuantum project is to help share ideas and to stimulate collaborative research projects in quantum science.
+In _Polyquantum_, you can share a new research idea or collaborate on an existing one. A unique feature of _Polyquantum_ is a transparent tracking of each scientific contribution based on [Git](https://en.wikipedia.org/wiki/Git), such that authorship will be permanently preserved in Git history. 
+It is inspired by the successful [Polymath project](https://en.wikipedia.org/wiki/Polymath_Project) but, instead of being structured as a [blog](https://polymathprojects.org/)), it is hosted as a GitHub repository.
 
 ## Why GitHub?
 GitHub is based on the distributed version-control system [Git](https://en.wikipedia.org/wiki/Git) which, although specifically designed for developing software, is particularely convenient also for the aims of the Polyquantum. In a Git repository, the whole history of changes applied to any file is permanently tracked and recorded. This is a strong incentive for sharing ideas and collaborating in resaerch projects. Indeed, the fact that each contribution is public and permanently tracked helps to avoid plagiarism and misappropriations of intellectual property.
