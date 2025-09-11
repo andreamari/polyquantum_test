@@ -16,7 +16,7 @@ The Polyquantum project is inspired by the successful [Polymath project](https:/
 The main differences between Polyquantum and Polymath are the following:
  - Polymath is about mathematical research. Polyquantum is about quantum research.
  - Polymath is structured as a [blog](https://polymathprojects.org/). Polyquantum is structured as a GitHub repository.
- - Timothy Gowers and Terence Tao are both [Fields medalists](https://en.wikipedia.org/wiki/Fields_Medal). I'm not.
+ - Timothy Gowers and Terence Tao are both [Fields medalists](https://en.wikipedia.org/wiki/Fields_Medal). I'm not. A minor detail...
 
 The approach of Polyquantum is also clearly inspired by the methodologies and the tools of [open-source software](https://en.wikipedia.org/wiki/Open-source_software).
 Indeed, both GitHub and the underlying distributed version control system Git are state-of-the-art tools routinely used for open-source software develpment.
