@@ -1,5 +1,5 @@
 # Polyquantum
-_Collaborative research in quantum science._
+_Collaborative research in quantum science, powered by Git._
 
 ## About
 _Polyquantum_ is an experiment of open collaborative research in the field of quantum science.
