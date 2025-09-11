@@ -19,5 +19,5 @@ The main differences between Polyquantum and Polymath are the following:
  - Timothy Gowers and Terence Tao are both [Fields medalists](https://en.wikipedia.org/wiki/Fields_Medal). I'm not.
 
 The approach of Polyquantum is also clearly inspired by the methodologies and the tools of [open-source software](https://en.wikipedia.org/wiki/Open-source_software).
-Indeed, both GitHub and the underlying distributed version control system [Git] are state-of-the-art tools routinely used for open-source software develpment.
+Indeed, both GitHub and the underlying distributed version control system Git are state-of-the-art tools routinely used for open-source software develpment.
 The goal of Polyquantum is to apply the same methodologies and the same powerful tools that emerged in the field of open-source software into a different field: scientific research.
