@@ -1,5 +1,5 @@
 # Polyquantum
-_Collaborative research in quantum science powered by Git.
+_Collaborative research in quantum science powered by Git._
 ## About
 Polyquantum is a platform, structured as a GitHub repository, for open collaborative research in the field of quantum science.
 
