@@ -17,7 +17,7 @@ More details about Polyquantum can be found on the [ABOUT.md](ABOUT.md) page.
 
 ## How to create a new research project
 1. Open a new **issue** to share a new research idea or a new problem.
-2. Once refined, create a subfolder in `/documents/` folder.  
+2. Create a subfolder in `/documents/` folder.  
    - Name the subfolder after the issue number (e.g., `/documents/42/`).
    - Create or edit a Markdown document explaining your idea (e.g., `/documents/42/0-main.md`).
    - Include metadata at the top: author, date, source issue.  
