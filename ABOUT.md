@@ -22,5 +22,4 @@ Indeed, both GitHub and the underlying Git system are state-of-the-art tools rou
 The goal of Polyquantum is to apply the same methodologies and the same powerful tools that emerged in the context of open-source software to the context of open scientific research. The underpinning assumption is that both fields share the same basic needs: efficient collaborative writing of text documents, permanent recording of history, and traceable authorship.
 
 ## Aknowledgemnts
-I acknowledge useful discussions with Nathan Shammah and Will Zeng about the early-stage idea of the Polyquantum project.
-The same idea was presented in 2023 as a lightning talk at [UnitaryCON 2023](https://unitary.foundation/community/2023/unitaryCON/).
+I acknowledge Nathan Shammah and Will Zeng for useful discussions about Polyquantum and for the opportunity of presenting its early-stage idea at [UnitaryCON 2023](https://unitary.foundation/community/2023/unitaryCON/) as a lightning talk.
