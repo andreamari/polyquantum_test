@@ -8,7 +8,7 @@ A unique feature of Polyquantum is the transparent tracking of scientific contri
 The aim of Polyquantum is to facilitate open and transparent collaborations during all the steps of the research process: From the initial brainstorming of ideas to the final publication of the associated results.
 
 There exist many solutions for sharing finalized scientific works: open-access journals, open-access preprint servers (e.g., [arXiv](https://en.wikipedia.org/wiki/ArXiv)).
-The are instead few solutions for sharing early-stage research ideas and all the intermediate steps typical of a research process: Discussions with collaborators, connections with existing literature, tentative solutions, failures, change of directions, design of experiments, critical validation of the results, planning of the final manuscript, etc.. The goal of Polyquantum is to fill this gap.
+The are instead few solutions for sharing early-stage research ideas and all the intermediate steps typical of a research process: Discussions with collaborators, connections with existing literature, tentative solutions, failures, change of directions, design of experiments, critical analysis of results, planning of the final manuscript, etc.. The goal of Polyquantum is to fill this gap.
 
 ## Inspiration and name origin
 The Polyquantum project is inspired by the successful [Polymath project](https://en.wikipedia.org/wiki/Polymath_Project) by  [Timothy Gowers](https://en.wikipedia.org/wiki/Timothy_Gowers) and [Terence Tao](https://en.wikipedia.org/wiki/Terence_Tao). This explains the origin of the name _Polyquantum_. 
