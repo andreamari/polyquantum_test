@@ -1,4 +1,4 @@
-## About Polyquantum
+## What is Polyquantum?
 Polyquantum is a platform, structured as a GitHub repository, for open collaborative research in the field of quantum science.
 In Polyquantum, users can openly share a new research idea or collaborate on research projects proposed by other users.
 
