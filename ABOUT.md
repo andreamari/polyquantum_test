@@ -5,7 +5,7 @@ In Polyquantum, users can openly share a new research idea or collaborate on res
 A unique feature of Polyquantum is the transparent tracking of scientific contributions. This is achieved through the distributed version control system [Git](https://en.wikipedia.org/wiki/Git), ensuring that authorship is properly recognized by permanently recording research documents in the Git history. 
 
 ## Aim of Polyquantum
-The aim of Polyquantum is to facilitate an open and transparent approach during all the steps of the research process: From the initial brainstorming of ideas to the final publication of the associated results.
+The aim of Polyquantum is to facilitate open and transparent collaborations during all the steps of the research process: From the initial brainstorming of ideas to the final publication of the associated results.
 
 There exist many solutions for sharing finalized scientific works: open-access journals, open-access preprint servers (e.g., [arXiv](https://en.wikipedia.org/wiki/ArXiv)).
 The are instead few solutions for sharing early-stage research ideas and all the intermediate steps typical of a research process: Discussions with collaborators, connections with existing literature, tentative solutions, failures, change of directions, design of experiments, critical validation of the results, planning of the final manuscript, etc.. The goal of Polyquantum is to fill this gap.
