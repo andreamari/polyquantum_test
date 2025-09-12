@@ -29,5 +29,5 @@ More details about Polyquantum can be found on the [ABOUT.md](ABOUT.md) page.
 3. Open a Pull Request to merge the new subfolder and its internal file.  
 
 ## Issues vs. Markdown files
-- **Issues** are optimal for brainstorming, discussions, and quick comments. Autorship of contributions is weakly tracked by the web interface, not by Git.
+- **Issues** are optimal for brainstorming, discussions, and quick comments. Autorship of contributions is weakly (tracked) by the web interface, not by Git.
 - **Markdown files** are for more refined ideas/solutions/calculations that are worth preserving as a permanent record in the Git history. Such files can be easily referenced, tracked, and version-controlled. Autorship of contributions is strongly preserved.
