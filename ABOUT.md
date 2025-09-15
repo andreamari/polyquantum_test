@@ -17,11 +17,13 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 The aim of Polyquantum is to facilitate open and transparent collaborations at every step of the research process: from the initial brainstorming of ideas to the final publication of results.
 
 While there are many platforms for openly sharing finalized scientific work (e.g., open-access journals and preprint servers such as [arXiv](https://en.wikipedia.org/wiki/ArXiv)), there are few solutions for sharing early-stage ideas and the intermediate steps of research. These include:  
+
+- brainstorming of ideas,
 - discussions with collaborators,  
 - connections with existing literature,  
 - tentative solutions,  
 - failures and changes of direction,  
-- experimental designs,  
+- experimental designs,
 - critical analysis of results,  
 - planning of the final manuscript.  
 
@@ -35,10 +37,10 @@ The main differences are:
  - Polymath is structured as a [blog](https://polymathprojects.org/). Polyquantum is structured as a GitHub repository.
  - Timothy Gowers and Terence Tao are both [Fields medalists](https://en.wikipedia.org/wiki/Fields_Medal). I'm not. (A minor detail...)
 
-The approach of **Polyquantum** is explicitly inspired by methodologies and tools from [open-source software](https://en.wikipedia.org/wiki/Open-source_software). GitHub and the underlying Git system are powerful, state-of-the-art tools for collaborative code development. Polyquantum aims to apply these same tools to open scientific research, recognizing that both domains share similar needs:  
+The approach of Polyquantum is explicitly inspired by methodologies and tools from [open-source software](https://en.wikipedia.org/wiki/Open-source_software). GitHub and the underlying Git system are powerful, state-of-the-art tools for collaborative software development. Polyquantum aims to apply these same tools to open scientific research, recognizing that both domains share similar needs:  
 - efficient collaborative writing of documents,  
 - permanent recording of history,  
 - transparent and traceable authorship.  
 
 ## Aknowledgemnts
-I acknowledge Nathan Shammah and Will Zeng for discussions about the early-stage idea of Polyquantum back in 2020 and for the opportunity to pitch it with a lightning talk at [UnitaryCON 2023](https://unitary.foundation/community/2023/unitaryCON/).
+I acknowledge Nathan Shammah and Will Zeng for discussions on the initial idea of Polyquantum back in 2020 and for the opportunity to pitch it with a lightning talk at [UnitaryCON 2023](https://unitary.foundation/community/2023/unitaryCON/).
