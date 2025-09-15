@@ -36,7 +36,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 
 ## 💡 How to share a new research idea
 1. Open a [new issue](https://github.com/andreamari/polyquantum_test/issues/new/choose) describing your idea/project/problem.  
-2. Create a Markdown file in a new subfolder (named after the issue number):
+2. Formalize your idea in a Markdown and place it in a new subfolder (named after the issue number):
 ```
 /docs/42/1-idea.md
 ```
