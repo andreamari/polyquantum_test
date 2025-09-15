@@ -9,7 +9,7 @@ _Open, collaborative, version-controlled research in quantum science_
 It allows researchers to:
 
 - 💡 Share new research ideas openly  
-- 🤝 Collaborate on ongoing projects proposed by others  
+- 🛠️ Collaborate on ongoing projects proposed by others  
 - 📝 Preserve and track research contributions transparently  
 
 A key feature of Polyquantum is the **transparent tracking of authorship**.  
@@ -19,7 +19,7 @@ By using Git’s distributed version control, every contribution is permanently 
 
 ---
 
-## 🤝 How to Explore & Contribute to Existing Ideas
+## 🛠️ How to contribute to existing ideas
 
 1. Browse the [**Issues** section](https://github.com/andreamari/polyquantum_test/issues) to see existing research projects.  
 2. Interact and discuss by commenting on specific issues.  
@@ -40,7 +40,7 @@ By using Git’s distributed version control, every contribution is permanently 
 
 ---
 
-## 💡 How to Share a New Research Idea
+## 💡 How to share a new research idea
 
 1. Open a [new issue](https://github.com/andreamari/polyquantum_test/issues/new/choose) describing your idea/project/problem.  
 2. Create a Markdown file in a new subfolder (named after the issue number):
