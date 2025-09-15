@@ -9,7 +9,7 @@ This license is applied by default to all contributions, unless users explicitly
 - I understand that the contributed content cannot be completely removed once accepted and merged.
 - I understand that Poliquantum reserves the right to reclassify or reject any contributed content.
 
-This licence is inspired by the [ArXiv](https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html) preprint repository (it's essentialy a copy-and-paste). It gives Polyquantum the right to distribute your contribution, and it is the recommended option if you wish to publish your contribution in a scientific journal.
+This licence is inspired by the [ArXiv](https://arxiv.org/licenses/nonexclusive-distrib/1.0/license.html) preprint repository (it's essentially a copy-and-paste). It gives Polyquantum the right to distribute your contribution, and it is the **recommended option** if you wish to publish your final results in a scientific journal.
 
 ## Alternative licenses (require explicit reference in contributed documents)
 
