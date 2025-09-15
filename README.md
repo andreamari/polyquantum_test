@@ -32,7 +32,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
      3-alternative-solution.md
      ```
    - In every document, include author(s) and affiliation(s). 
-   - Suggested citation format: _Polyquantum 42.2 (2025)_, correspnding in this example to Issue #42, document #2.  
+   - Suggested citation format: _Polyquantum 42.2 (2025)_, corresponding in this example to Issue #42, document #2.  
 4. Open a _Pull Request_ to merge your contribution.
 
 
