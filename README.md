@@ -2,7 +2,6 @@
 _Open, collaborative, version-controlled research in quantum science_
 
 ## About
-
 _Polyquantum_ is an open platform for collaborative research in quantum science, structured as a GitHub repository.  
 It allows researchers to:
 
@@ -17,7 +16,6 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 
 
 ## 🛠️ How to contribute to existing ideas
-
 1. Browse the [**Issues** section](https://github.com/andreamari/polyquantum_test/issues) to see existing research projects.  
 2. Interact and discuss by commenting on specific issues.  
 3. When discussions produce original material (ideas, solutions, calculations, etc.):  
@@ -37,7 +35,6 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 
 
 ## 💡 How to share a new research idea
-
 1. Open a [new issue](https://github.com/andreamari/polyquantum_test/issues/new/choose) describing your idea/project/problem.  
 2. Create a Markdown file in a new subfolder (named after the issue number):
 ```
@@ -55,9 +52,6 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 - **Issues** are optimal for brainstorming, discussions, and quick comments. Authorship of contributions is (weakly) tracked by the web interface, not by Git.
 - **Markdown files** are for more refined ideas/solutions/calculations that are worth preserving as a permanent record in the Git history. Such files are referenced, tracked, and version-controlled. Authorship of contributions is strongly preserved by the Git system.
 
----
-
 ## 📜 License
-
 👉See [LICENSE.md](LICENSE.md) page.
 
