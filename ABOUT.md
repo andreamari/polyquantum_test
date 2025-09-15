@@ -16,7 +16,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 
 The aim of Polyquantum is to facilitate open and transparent collaborations at every step of the research process: from the initial brainstorming of ideas to the final publication of results.
 
-While there are many platforms for sharing finalized scientific work (e.g., open-access journals and preprint servers such as [arXiv](https://en.wikipedia.org/wiki/ArXiv)), there are few solutions for sharing **early-stage ideas** and the **intermediate steps** of research. These include:  
+While there are many platforms for sharing finalized scientific work (e.g., open-access journals and preprint servers such as [arXiv](https://en.wikipedia.org/wiki/ArXiv)), there are few solutions for sharing early-stage ideas and the intermediate steps of research. These include:  
 - discussions with collaborators,  
 - connections with existing literature,  
 - tentative solutions,  
