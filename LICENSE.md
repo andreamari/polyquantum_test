@@ -23,4 +23,4 @@ To select one of the following licenses, users must specify it at the top of the
 
 - **CC BY-NC-ND 4.0: Creative Commons Attribution-Noncommercial-NoDerivatives.** This license allows reusers to copy and distribute the material in any medium or format in unadapted form only, for noncommercial purposes only, and only so long as attribution is given to the creator.
 
-- **CC ZeroCC Zero.** CC0 allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, with no conditions.
+- **CC Zero: Creative Commons Zero.** This licence allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, with no conditions.
