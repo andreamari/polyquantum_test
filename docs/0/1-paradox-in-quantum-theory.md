@@ -13,7 +13,7 @@ $$
 It is easy to check that this is a simultaneous eigenstate of the operators $\hat x_- =\hat x_1 - \hat x_2$ and $\hat p_+= \hat p_1 + \hat p_2$.
 This means that by measuring the observable $\hat x_1$ or $\hat p_1$ of the first particle, one can deduce with infinite precision the value of $\hat x_2$ or $\hat p_2$ of the second particle.
 
-The fact that we can know the value of $\hat x_2$ or $\hat p_2$, *without interacting* with the second particle, means
+The fact that we can know the value of $\hat x_2$ or $\hat p_2$, *without interacting* with the second particle, means that
 
 1. both quantities $\hat x_2$ and $\hat p_2$ are *elements of reality* of the second particle, i.e., they correspond to well-defined properties of the second particle.
 
