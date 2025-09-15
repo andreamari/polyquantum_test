@@ -52,8 +52,8 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 
 
 ## Issues vs. Markdown files
-- **Issues** are optimal for brainstorming, discussions, and quick comments. Autorship of contributions is (weakly) tracked by the web interface, not by Git.
-- **Markdown files** are for more refined ideas/solutions/calculations that are worth preserving as a permanent record in the Git history. Such files are referenced, tracked, and version-controlled. Autorship of contributions is strongly preserved by the Git system.
+- **Issues** are optimal for brainstorming, discussions, and quick comments. Authorship of contributions is (weakly) tracked by the web interface, not by Git.
+- **Markdown files** are for more refined ideas/solutions/calculations that are worth preserving as a permanent record in the Git history. Such files are referenced, tracked, and version-controlled. Authorship of contributions is strongly preserved by the Git system.
 
 ---
 
