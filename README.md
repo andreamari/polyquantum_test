@@ -1,34 +1,68 @@
 # Polyquantum
-_Collaborative research in quantum science, version-controlled._
+_Open, collaborative, version-controlled research in quantum science_
+
+---
 
 ## About
-Polyquantum is a platform, structured as a GitHub repository, for open collaborative research in the field of quantum science.
-In Polyquantum, users can openly share a new research idea or collaborate on research projects proposed by other users.
 
-A unique feature of Polyquantum is the transparent tracking of scientific contributions. This is achieved through the distributed version control system [Git](https://en.wikipedia.org/wiki/Git), ensuring that authorship is properly recognized by permanently recording research documents in the Git history. 
+**Polyquantum** is an open platform for collaborative research in **quantum science**, structured as a GitHub repository.  
+It allows researchers to:
 
-More details about Polyquantum can be found on the [ABOUT.md](ABOUT.md) page.
+- 💡 Share new research ideas openly  
+- 🤝 Collaborate on ongoing projects proposed by others  
+- 📝 Preserve and track research contributions transparently  
 
-## How to explore and contribute to existing ideas
-1. Go to the [_Issues_ section](https://github.com/andreamari/polyquantum_test/issues) and explore the list of all existing projects.
-1. Discuss and interact directly by commenting on a specific issue.
-2. Each time the discussion produces original material that is worth preserving and tracking (ideas, solutions, calculations, etc..), create or edit a Markdown document in the issue subfolder (e.g., `/documents/42/1-solution.md`, `/documents/42/2-alternative-solution.md`, _etc._).
-   - Name the file starting with a progressive number `#-` (e.g., `2-solution.md`, `3-alternative-solution`). This creates a chronological ordering and a compact reference convention.
-   - The content of the document must contain two required fields: _Author(s)_ and _Affiliation(s)_.
-   - The new document can be referenced within Polyquantum or in external works with the following suggested notation: _Polyquantum 42.2 (2025)_, corresponding to issue number 42, document number 2.
-4. Open a Pull Request to merge your file.
+A key feature of Polyquantum is the **transparent tracking of authorship**.  
+By using Git’s distributed version control, every contribution is permanently recorded, ensuring proper recognition of contributors.  
 
-## How to share a new research idea
-1. Open a [new *issue*](https://github.com/andreamari/polyquantum_test/issues/new/choose) to share a new research idea/problem/project.
-2. Create a Markdown document explaining your idea (e.g., `/documents/42/1-idea.md`).
-   - Name the subfolder after the issue number (e.g., `/documents/42/`).
-   - Name the file starting with `1-` (e.g., `/documents/42/1-idea.md`) to indicate that this is the first document.
-   - The content of the document must contain two required fields: _Author(s)_ and _Affiliation(s)_.
-   - The full project can be referenced within Polyquantum or in external works with the following suggested notation: _Polyquantum 42 (2025)_.
-   - The specific document containing the seed idea can be referenced as _Polyquantum 42.1 (2025)_. 
-3. Open a Pull Request to merge the new subfolder and its internal file.
+👉 More details can be found in the [ABOUT.md](ABOUT.md) page.
 
+---
+
+## 🤝 How to Explore & Contribute to Existing Ideas
+
+1. Browse the [**Issues** section](https://github.com/andreamari/polyquantum_test/issues) to see existing research projects.  
+2. Interact and discuss by commenting on specific issues.  
+3. When discussions produce original material (ideas, solutions, calculations, etc.):  
+   - Create or edit a Markdown file in the corresponding issue subfolder:  
+     ```
+     /documents/42/2-solution.md
+     /documents/42/3-alternative-solution.md
+     ```
+   - Use a progressive number prefix (`1-`, `2-`, `3-` …) for ordering:  
+     ```
+     2-solution.md
+     3-alternative-solution.md
+     ```
+   - In every document always include **author(s)** and **affiliation(s)**. 
+   - Suggested citation format: _Polyquantum 42.2 (2025)_, correspnding in this example to Issue #42, document #2.  
+4. Open a **Pull Request** to merge your contribution.
+
+---
+
+## 💡 How to Share a New Research Idea
+
+1. Open a [new issue](https://github.com/andreamari/polyquantum_test/issues/new/choose) describing your idea/project/problem.  
+2. Create a Markdown file in a new subfolder (named after the issue number):
+```
+/documents/42/1-idea.md
+```
+- Always start with `1-` for the seed document.  
+- Include **Author(s)** and **Affiliation(s)**.  
+- Suggested citation formats:  
+  - Whole research project: `Polyquantum 42 (2025)`  
+  - Specific seed document: `Polyquantum 42.1 (2025)`  
+3. Open a **Pull Request** to merge your new project folder and seed document.
+
+---
 
 ## Issues vs. Markdown files
 - **Issues** are optimal for brainstorming, discussions, and quick comments. Autorship of contributions is (weakly) tracked by the web interface, not by Git.
-- **Markdown files** are for more refined ideas/solutions/calculations that are worth preserving as a permanent record in the Git history. Such files can be easily referenced, tracked, and version-controlled. Autorship of contributions is strongly preserved by the GIT system.
+- **Markdown files** are for more refined ideas/solutions/calculations that are worth preserving as a permanent record in the Git history. Such files are referenced, tracked, and version-controlled. Autorship of contributions is strongly preserved by the GIT system.
+
+---
+
+## 📜 License
+
+👉See [LICENSE.md](LICENSE.md) page.
+
