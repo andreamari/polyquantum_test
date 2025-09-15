@@ -1,8 +1,6 @@
 # Polyquantum
 _Open, collaborative, version-controlled research in quantum science_
 
----
-
 ## About
 
 _Polyquantum_ is an open platform for collaborative research in quantum science, structured as a GitHub repository.  
@@ -17,7 +15,6 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 
 👉 More details can be found in the [ABOUT.md](ABOUT.md) page.
 
----
 
 ## 🛠️ How to contribute to existing ideas
 
@@ -38,7 +35,6 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
    - Suggested citation format: _Polyquantum 42.2 (2025)_, correspnding in this example to Issue #42, document #2.  
 4. Open a _Pull Request_ to merge your contribution.
 
----
 
 ## 💡 How to share a new research idea
 
@@ -55,7 +51,6 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
   - Specific seed document: `Polyquantum 42.1 (2025)`. 
 3. Open a _Pull Request_ to merge your new project folder and seed document.
 
----
 
 ## Issues vs. Markdown files
 - **Issues** are optimal for brainstorming, discussions, and quick comments. Autorship of contributions is (weakly) tracked by the web interface, not by Git.
