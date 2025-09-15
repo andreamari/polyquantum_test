@@ -40,11 +40,11 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 ```
 /docs/42/1-idea.md
 ```
-- Always start the file name with `1-` for the seed document.  
-- In every document, always include author(s) and affiliation(s).
-- Suggested citation formats:  
-  - Whole research project: `Polyquantum 42 (2025)`.
-  - Specific seed document: `Polyquantum 42.1 (2025)`. 
+   - Always start the file name with `1-` for the seed document.  
+   - In every document, always include author(s) and affiliation(s).
+   - Suggested citation formats:  
+      - Whole research project: `Polyquantum 42 (2025)`.
+      - Specific seed document: `Polyquantum 42.1 (2025)`. 
 3. Open a _pull request_ to merge your new project folder and seed document.
 
 
