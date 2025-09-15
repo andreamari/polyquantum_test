@@ -24,7 +24,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
      /docs/42/2-solution.md
      /docs/42/3-alternative-solution.md
      ```
-   - Use a progressive number prefix (`1-`, `2-`, `3-` …) for ordering:  
+   - Use a progressive number prefix (`1-`, `2-`, `3-` …) in file names for ordering:  
      ```
      2-solution.md
      3-alternative-solution.md
@@ -40,7 +40,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 ```
 /docs/42/1-idea.md
 ```
-- Always start with `1-` for the seed document.  
+- Always start the file name with `1-` for the seed document.  
 - In every document, always include **author(s)** and **affiliation(s)**.
 - Suggested citation formats:  
   - Whole research project: `Polyquantum 42 (2025)`.
