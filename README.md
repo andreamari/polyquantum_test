@@ -12,7 +12,7 @@ It allows researchers to:
 A key feature of Polyquantum is the transparent tracking of authorship.  
 By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed version control, every research step is permanently recorded in Markdown documents, ensuring proper recognition of contributors.  
 
-👉 More details can be found in the [ABOUT.md](ABOUT.md) page.
+👉 More details about Polyquantum can be found in the [ABOUT.md](ABOUT.md) page.
 
 
 ## 🛠️ How to contribute to existing ideas
