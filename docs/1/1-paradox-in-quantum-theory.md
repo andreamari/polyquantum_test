@@ -24,3 +24,6 @@ However, according to the Heisenberg uncertainty principle [^1],  the commutator
 Does the contradiction between (1) and (2) imply that quantum theory is not a complete description of reality?
 
 [^1]: W. K. Heisenberg, Über den anschaulichen Inhalt der quantentheoretischen Kinematik und Mechanik. [Z. Physik 43, 172–198 (1927)](https://doi.org/10.1007/BF01397280).
+
+
+Another edit!
