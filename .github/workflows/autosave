@@ -1,0 +1,69 @@
+name: Autosave issue to Markdown
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+
+jobs:
+  autosave-issue:
+    if: contains(github.event.issue.body, '@autosave-in-new-file') || contains(github.event.issue.body, '@autosave-in-last-file')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Prepare folder
+        id: prepare
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          FOLDER="docs/$ISSUE_NUMBER"
+          mkdir -p $FOLDER
+          echo "FOLDER=$FOLDER" >> $GITHUB_ENV
+
+      - name: Determine filename prefix
+        id: prefix
+        run: |
+          FOLDER=$GITHUB_ENV/FOLDER
+          # Get highest numeric prefix in existing files
+          LAST_PREFIX=$(ls $FOLDER/[0-9]*-*.md 2>/dev/null | sed -E 's#.*/([0-9]+)-.*#\1#' | sort -n | tail -1)
+          if [ -z "$LAST_PREFIX" ]; then
+            LAST_PREFIX=0
+          fi
+
+          if [[ "${{ github.event.issue.body }}" == *"@autosave-in-new-file"* ]]; then
+            NEXT_PREFIX=$((LAST_PREFIX + 1))
+          else
+            NEXT_PREFIX=$LAST_PREFIX
+          fi
+
+          echo "NEXT_PREFIX=$NEXT_PREFIX" >> $GITHUB_ENV
+
+      - name: Create Markdown file
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          FOLDER=$GITHUB_ENV/FOLDER
+          PREFIX=$GITHUB_ENV/NEXT_PREFIX
+
+          # Clean issue body: remove trigger commands
+          BODY="${{ github.event.issue.body }}"
+          BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-in-new-file//g; s/@autosave-in-last-file//g')
+
+          FILENAME="$FOLDER/$PREFIX-autosaved-comment.md"
+
+          echo "# ${{ github.event.issue.title }}" > "$FILENAME"
+          echo "" >> "$FILENAME"
+          echo "$BODY_CLEAN" >> "$FILENAME"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add $GITHUB_ENV/FOLDER/*.md
+          git commit -m "Autosave issue #${{ github.event.issue.number }} to Markdown" || echo "No changes to commit"
+          git push
