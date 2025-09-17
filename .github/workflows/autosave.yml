@@ -1,15 +1,15 @@
-name: Autosave issue to Markdown
+name: Autosave issue or comment to Markdown
 
 on:
-  issues:
-    types: [opened, edited]
+  issue_comment:
+    types: [created]
 
 permissions:
   contents: write
 
 jobs:
-  autosave-issue:
-    if: contains(github.event.issue.body, '@autosave-in-new-file') || contains(github.event.issue.body, '@autosave-in-last-file')
+  autosave-comment:
+    if: contains(github.event.comment.body, '@autosave-in-new-file') || contains(github.event.comment.body, '@autosave-in-last-file')
     runs-on: ubuntu-latest
 
     steps:
@@ -36,7 +36,9 @@ jobs:
             LAST_PREFIX=0
           fi
 
-          if [[ "${{ github.event.issue.body }}" == *"@autosave-in-new-file"* ]]; then
+          BODY="${{ github.event.comment.body }}"
+
+          if [[ "$BODY" == *"@autosave-in-new-file"* ]]; then
             NEXT_PREFIX=$((LAST_PREFIX + 1))
           else
             NEXT_PREFIX=$LAST_PREFIX
@@ -50,12 +52,13 @@ jobs:
           FOLDER=$GITHUB_ENV/FOLDER
           PREFIX=$GITHUB_ENV/NEXT_PREFIX
 
-          # Clean issue body: remove trigger commands
-          BODY="${{ github.event.issue.body }}"
+          BODY="${{ github.event.comment.body }}"
+          # Remove trigger commands from saved content
           BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-in-new-file//g; s/@autosave-in-last-file//g')
 
           FILENAME="$FOLDER/$PREFIX-autosaved-comment.md"
 
+          # Save the issue title and the cleaned comment
           echo "# ${{ github.event.issue.title }}" > "$FILENAME"
           echo "" >> "$FILENAME"
           echo "$BODY_CLEAN" >> "$FILENAME"
@@ -65,5 +68,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add $GITHUB_ENV/FOLDER/*.md
-          git commit -m "Autosave issue #${{ github.event.issue.number }} to Markdown" || echo "No changes to commit"
+          git commit -m "Autosave comment in issue #${{ github.event.issue.number }} to Markdown" || echo "No changes to commit"
           git push
