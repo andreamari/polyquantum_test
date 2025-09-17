@@ -12,8 +12,8 @@ permissions:
 jobs:
   autosave:
     if: >
-      (github.event_name == 'issues' && (contains(github.event.issue.body, '@autosave-in-new-file') || contains(github.event.issue.body, '@autosave-in-last-file'))) ||
-      (github.event_name == 'issue_comment' && (contains(github.event.comment.body, '@autosave-in-new-file') || contains(github.event.comment.body, '@autosave-in-last-file')))
+      (github.event_name == 'issues' && (contains(github.event.issue.body, '@autosave-to-new-file') || contains(github.event.issue.body, '@autosave-to-last-file'))) ||
+      (github.event_name == 'issue_comment' && (contains(github.event.comment.body, '@autosave-to-new-file') || contains(github.event.comment.body, '@autosave-to-last-file')))
     runs-on: ubuntu-latest
 
     steps:
@@ -50,14 +50,14 @@ jobs:
           fi
 
           # Determine trigger type
-          if [[ "$BODY" == *"@autosave-in-new-file"* ]]; then
+          if [[ "$BODY" == *"@autosave-to-new-file"* ]]; then
             NEXT_PREFIX=$((LAST_PREFIX + 1))
           else
             NEXT_PREFIX=$LAST_PREFIX
           fi
 
           # Remove trigger commands from content
-          BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-in-new-file//g; s/@autosave-in-last-file//g')
+          BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-to-new-file//g; s/@autosave-to-last-file//g')
 
           # Export as environment variables
           echo "NEXT_PREFIX=$NEXT_PREFIX" >> $GITHUB_ENV
