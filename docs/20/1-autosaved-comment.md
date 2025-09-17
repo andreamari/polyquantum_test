@@ -1,9 +1,7 @@
 # Test trigger actions (Issue title)
 
-Issue body with equation
+Issue body with equation:
 
-2050
+2046
 X=4
-2050
-
-@autosave-to-last-file
+2046
