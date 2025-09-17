@@ -36,16 +36,16 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 
 ## 💡 How to share a new research idea
 1. Open a [new issue](https://github.com/andreamari/polyquantum_test/issues/new/choose) describing your idea/project/problem.  
-2. Formalize your idea in a Markdown file and place it in a new subfolder (named after the issue number). E.g.,
+2. Formalize your idea in a Markdown file and place it in the subfolder `docs/[NUM_ISSUE]/`, e.g.,
 ```
 /docs/1/1-idea.md
 ```
-   - Always start the file name with `1-` for the seed document.  
-   - In every document, always include author(s) and affiliation(s).
+   - Start the file name with `1-` (initial document).  
+   - Include author(s) and affiliation(s).
    - Suggested citation formats:  
       - Whole research project: `Polyquantum 1 (2025)`.
-      - Specific seed document: `Polyquantum 1.1 (2025)`. 
-3. Open a _pull request_ to merge your new project folder and seed document.
+      - Specific initial document: `Polyquantum 1.1 (2025)`. 
+3. Open a _pull request_ to merge your new document.
 
 
 ## Issues vs. Markdown files
