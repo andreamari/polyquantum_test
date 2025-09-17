@@ -2,9 +2,9 @@ name: Autosave issue or comment to Markdown
 
 on:
   issues:
-    types: [opened, edited]                # catch initial issue body
+    types: [opened, edited]
   issue_comment:
-    types: [created, edited]               # catch comments
+    types: [created, edited]
 
 permissions:
   contents: write
@@ -12,10 +12,8 @@ permissions:
 jobs:
   autosave:
     if: >
-      (github.event_name == 'issues' && contains(github.event.issue.body, '@autosave-in-new-file') ) ||
-      (github.event_name == 'issues' && contains(github.event.issue.body, '@autosave-in-last-file') ) ||
-      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@autosave-in-new-file') ) ||
-      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@autosave-in-last-file') )
+      (github.event_name == 'issues' && (contains(github.event.issue.body, '@autosave-in-new-file') || contains(github.event.issue.body, '@autosave-in-last-file'))) ||
+      (github.event_name == 'issue_comment' && (contains(github.event.comment.body, '@autosave-in-new-file') || contains(github.event.comment.body, '@autosave-in-last-file')))
     runs-on: ubuntu-latest
 
     steps:
@@ -24,61 +22,72 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Prepare folder
+      - name: Set folder
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           FOLDER="docs/$ISSUE_NUMBER"
           mkdir -p "$FOLDER"
-          echo "FOLDER=$FOLDER" >> $GITHUB_ENV
+          echo "Using folder: $FOLDER"
 
-      - name: Determine filename prefix
+      - name: Determine filename prefix and content
+        id: determine
         run: |
-          FOLDER=$FOLDER
-          # get highest numeric prefix from existing files
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          FOLDER="docs/$ISSUE_NUMBER"
+
+          # Get highest numeric prefix from existing files
           LAST_PREFIX=$(ls "$FOLDER"/[0-9]*-*.md 2>/dev/null | sed -E 's#.*/([0-9]+)-.*#\1#' | sort -n | tail -1)
           if [ -z "$LAST_PREFIX" ]; then
             LAST_PREFIX=0
           fi
 
-          # Select body depending on event
+          # Determine body depending on event
           if [ "${GITHUB_EVENT_NAME}" == "issues" ]; then
             BODY="${{ github.event.issue.body }}"
+            INCLUDE_TITLE="true"
           else
             BODY="${{ github.event.comment.body }}"
+            INCLUDE_TITLE="false"
           fi
 
+          # Determine trigger type
           if [[ "$BODY" == *"@autosave-in-new-file"* ]]; then
             NEXT_PREFIX=$((LAST_PREFIX + 1))
           else
             NEXT_PREFIX=$LAST_PREFIX
           fi
 
+          # Remove trigger commands from content
+          BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-in-new-file//g; s/@autosave-in-last-file//g')
+
           echo "NEXT_PREFIX=$NEXT_PREFIX" >> $GITHUB_ENV
-          echo "BODY=$BODY" >> $GITHUB_ENV
+          echo "BODY_CLEAN<<EOF" >> $GITHUB_ENV
+          echo "$BODY_CLEAN" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+          echo "INCLUDE_TITLE=$INCLUDE_TITLE" >> $GITHUB_ENV
 
       - name: Create Markdown file
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
-          FOLDER=$FOLDER
+          FOLDER="docs/$ISSUE_NUMBER"
           PREFIX=$NEXT_PREFIX
-
-          # Clean body: remove trigger commands
-          BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-in-new-file//g; s/@autosave-in-last-file//g')
 
           FILENAME="$FOLDER/$PREFIX-autosaved-comment.md"
 
-          # Include title only if event is the original issue creation
-          if [ "${GITHUB_EVENT_NAME}" == "issues" ]; then
+          # Start the file
+          if [ "$INCLUDE_TITLE" = "true" ]; then
             echo "# ${{ github.event.issue.title }}" > "$FILENAME"
             echo "" >> "$FILENAME"
           else
-            echo "" > "$FILENAME"   # start with empty file for comments
+            echo "" > "$FILENAME"
           fi
 
-          # Append cleaned body
-          echo "$BODY_CLEAN" >> "$FILENAME"
+          # Append body
+          cat <<'EOF' >> "$FILENAME"
+$BODY_CLEAN
+EOF
 
-      - name: Commit and push
+      - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
