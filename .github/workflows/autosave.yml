@@ -11,6 +11,9 @@ permissions:
 
 jobs:
   autosave:
+    if: >
+      (github.event_name == 'issues' && (contains(github.event.issue.body, '@autosave-to-new-file') || contains(github.event.issue.body, '@autosave-to-last-file'))) ||
+      (github.event_name == 'issue_comment' && (contains(github.event.comment.body, '@autosave-to-new-file') || contains(github.event.comment.body, '@autosave-to-last-file')))
     runs-on: ubuntu-latest
 
     steps:
