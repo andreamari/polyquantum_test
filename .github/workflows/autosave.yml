@@ -1,15 +1,21 @@
 name: Autosave issue or comment to Markdown
 
 on:
+  issues:
+    types: [opened, edited]                # catch initial issue body
   issue_comment:
-    types: [created]
+    types: [created, edited]               # catch comments
 
 permissions:
   contents: write
 
 jobs:
-  autosave-comment:
-    if: contains(github.event.comment.body, '@autosave-in-new-file') || contains(github.event.comment.body, '@autosave-in-last-file')
+  autosave:
+    if: >
+      (github.event_name == 'issues' && contains(github.event.issue.body, '@autosave-in-new-file') ) ||
+      (github.event_name == 'issues' && contains(github.event.issue.body, '@autosave-in-last-file') ) ||
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@autosave-in-new-file') ) ||
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@autosave-in-last-file') )
     runs-on: ubuntu-latest
 
     steps:
@@ -28,13 +34,18 @@ jobs:
       - name: Determine filename prefix
         run: |
           FOLDER=$FOLDER
-          # Get highest numeric prefix from existing files
+          # get highest numeric prefix from existing files
           LAST_PREFIX=$(ls "$FOLDER"/[0-9]*-*.md 2>/dev/null | sed -E 's#.*/([0-9]+)-.*#\1#' | sort -n | tail -1)
           if [ -z "$LAST_PREFIX" ]; then
             LAST_PREFIX=0
           fi
 
-          BODY="${{ github.event.comment.body }}"
+          # Select body depending on event
+          if [ "${GITHUB_EVENT_NAME}" == "issues" ]; then
+            BODY="${{ github.event.issue.body }}"
+          else
+            BODY="${{ github.event.comment.body }}"
+          fi
 
           if [[ "$BODY" == *"@autosave-in-new-file"* ]]; then
             NEXT_PREFIX=$((LAST_PREFIX + 1))
@@ -43,6 +54,7 @@ jobs:
           fi
 
           echo "NEXT_PREFIX=$NEXT_PREFIX" >> $GITHUB_ENV
+          echo "BODY=$BODY" >> $GITHUB_ENV
 
       - name: Create Markdown file
         run: |
@@ -50,20 +62,26 @@ jobs:
           FOLDER=$FOLDER
           PREFIX=$NEXT_PREFIX
 
-          BODY="${{ github.event.comment.body }}"
-          # Remove trigger commands from content
+          # Clean body: remove trigger commands
           BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-in-new-file//g; s/@autosave-in-last-file//g')
 
           FILENAME="$FOLDER/$PREFIX-autosaved-comment.md"
 
-          echo "# ${{ github.event.issue.title }}" > "$FILENAME"
-          echo "" >> "$FILENAME"
+          # Include title only if event is the original issue creation
+          if [ "${GITHUB_EVENT_NAME}" == "issues" ]; then
+            echo "# ${{ github.event.issue.title }}" > "$FILENAME"
+            echo "" >> "$FILENAME"
+          else
+            echo "" > "$FILENAME"   # start with empty file for comments
+          fi
+
+          # Append cleaned body
           echo "$BODY_CLEAN" >> "$FILENAME"
 
-      - name: Commit and push changes
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/${{ github.event.issue.number }}/*.md
-          git commit -m "Autosave comment in issue #${{ github.event.issue.number }} to Markdown" || echo "No changes to commit"
+          git commit -m "Autosave content in issue #${{ github.event.issue.number }} to Markdown" || echo "No changes to commit"
           git push
