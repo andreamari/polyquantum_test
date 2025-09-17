@@ -93,8 +93,8 @@ jobs:
 
           # Append body safely (preserves LaTeX and special chars)
           cat <<EOF >> "$FILENAME"
-$BODY_CLEAN
-EOF
+          $BODY_CLEAN
+          EOF
 
       - name: Commit and push
         run: |
