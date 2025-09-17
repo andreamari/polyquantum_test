@@ -27,7 +27,7 @@ jobs:
           # Create a README.md with issue reference
           echo "# Research Project $ISSUE_NUMBER" > docs/$ISSUE_NUMBER/README.md
           echo "" >> docs/$ISSUE_NUMBER/README.md
-          echo "👉 See original discussion in issue $REPO#$ISSUE_NUMBER"
+          echo "👉 See original discussion in issue $REPO#$ISSUE_NUMBER" >> docs/$ISSUE_NUMBER/README.md
 
       - name: Commit and push changes
         run: |
