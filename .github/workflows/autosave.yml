@@ -22,7 +22,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set folder
+      - name: Prepare folder
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           FOLDER="docs/$ISSUE_NUMBER"
@@ -30,7 +30,6 @@ jobs:
           echo "Using folder: $FOLDER"
 
       - name: Determine filename prefix and content
-        id: determine
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           FOLDER="docs/$ISSUE_NUMBER"
@@ -60,6 +59,7 @@ jobs:
           # Remove trigger commands from content
           BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-in-new-file//g; s/@autosave-in-last-file//g')
 
+          # Export as environment variables
           echo "NEXT_PREFIX=$NEXT_PREFIX" >> $GITHUB_ENV
           echo "BODY_CLEAN<<EOF" >> $GITHUB_ENV
           echo "$BODY_CLEAN" >> $GITHUB_ENV
@@ -71,7 +71,6 @@ jobs:
           ISSUE_NUMBER=${{ github.event.issue.number }}
           FOLDER="docs/$ISSUE_NUMBER"
           PREFIX=$NEXT_PREFIX
-
           FILENAME="$FOLDER/$PREFIX-autosaved-comment.md"
 
           # Start the file
@@ -82,12 +81,10 @@ jobs:
             echo "" > "$FILENAME"
           fi
 
-          # Append body
-          cat <<'EOF' >> "$FILENAME"
-$BODY_CLEAN
-EOF
+          # Append cleaned body safely
+          printf "%s\n" "$BODY_CLEAN" >> "$FILENAME"
 
-      - name: Commit and push changes
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
