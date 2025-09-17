@@ -19,19 +19,17 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepare folder
-        id: prepare
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           FOLDER="docs/$ISSUE_NUMBER"
-          mkdir -p $FOLDER
+          mkdir -p "$FOLDER"
           echo "FOLDER=$FOLDER" >> $GITHUB_ENV
 
       - name: Determine filename prefix
-        id: prefix
         run: |
-          FOLDER=$GITHUB_ENV/FOLDER
-          # Get highest numeric prefix in existing files
-          LAST_PREFIX=$(ls $FOLDER/[0-9]*-*.md 2>/dev/null | sed -E 's#.*/([0-9]+)-.*#\1#' | sort -n | tail -1)
+          FOLDER=$FOLDER
+          # Get highest numeric prefix from existing files
+          LAST_PREFIX=$(ls "$FOLDER"/[0-9]*-*.md 2>/dev/null | sed -E 's#.*/([0-9]+)-.*#\1#' | sort -n | tail -1)
           if [ -z "$LAST_PREFIX" ]; then
             LAST_PREFIX=0
           fi
@@ -49,16 +47,15 @@ jobs:
       - name: Create Markdown file
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
-          FOLDER=$GITHUB_ENV/FOLDER
-          PREFIX=$GITHUB_ENV/NEXT_PREFIX
+          FOLDER=$FOLDER
+          PREFIX=$NEXT_PREFIX
 
           BODY="${{ github.event.comment.body }}"
-          # Remove trigger commands from saved content
+          # Remove trigger commands from content
           BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-in-new-file//g; s/@autosave-in-last-file//g')
 
           FILENAME="$FOLDER/$PREFIX-autosaved-comment.md"
 
-          # Save the issue title and the cleaned comment
           echo "# ${{ github.event.issue.title }}" > "$FILENAME"
           echo "" >> "$FILENAME"
           echo "$BODY_CLEAN" >> "$FILENAME"
@@ -67,6 +64,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add $GITHUB_ENV/FOLDER/*.md
+          git add docs/${{ github.event.issue.number }}/*.md
           git commit -m "Autosave comment in issue #${{ github.event.issue.number }} to Markdown" || echo "No changes to commit"
           git push
