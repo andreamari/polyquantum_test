@@ -22,14 +22,14 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set folder
+      - name: Prepare folder
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           FOLDER="docs/$ISSUE_NUMBER"
           mkdir -p "$FOLDER"
-          echo "FOLDER=$FOLDER"
+          echo "Using folder: $FOLDER"
 
-      - name: Determine prefix and content
+      - name: Determine filename prefix and content
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           FOLDER="docs/$ISSUE_NUMBER"
@@ -40,36 +40,26 @@ jobs:
             LAST_PREFIX=0
           fi
 
-          # Determine event type and body
+          # Determine body depending on event
           if [ "${GITHUB_EVENT_NAME}" == "issues" ]; then
             BODY="${{ github.event.issue.body }}"
             INCLUDE_TITLE="true"
-            TRIGGER="@autosave-in-new-file"  # auto-save issues by default
           else
             BODY="${{ github.event.comment.body }}"
             INCLUDE_TITLE="false"
-            TRIGGER="@autosave-in-new-file @autosave-in-last-file"
           fi
 
-          # Check if comment triggers autosave
-          if [ "${GITHUB_EVENT_NAME}" == "issue_comment" ]; then
-            if [[ "$BODY" != *"@autosave-in-new-file"* && "$BODY" != *"@autosave-in-last-file"* ]]; then
-              echo "No trigger found, skipping autosave"
-              exit 0
-            fi
-          fi
-
-          # Determine prefix
-          if [[ "$BODY" == *"@autosave-in-new-file"* ]]; then
+          # Determine trigger type
+          if [[ "$BODY" == *"@autosave-to-new-file"* ]]; then
             NEXT_PREFIX=$((LAST_PREFIX + 1))
           else
             NEXT_PREFIX=$LAST_PREFIX
           fi
 
-          # Remove trigger commands
-          BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-in-new-file//g; s/@autosave-in-last-file//g')
+          # Remove trigger commands from content
+          BODY_CLEAN=$(echo "$BODY" | sed -E 's/@autosave-to-new-file//g; s/@autosave-to-last-file//g')
 
-          # Export variables
+          # Export as environment variables
           echo "NEXT_PREFIX=$NEXT_PREFIX" >> $GITHUB_ENV
           echo "BODY_CLEAN<<EOF" >> $GITHUB_ENV
           echo "$BODY_CLEAN" >> $GITHUB_ENV
@@ -91,10 +81,8 @@ jobs:
             echo "" > "$FILENAME"
           fi
 
-          # Append body safely (preserves LaTeX and special chars)
-          cat <<EOF >> "$FILENAME"
-          $BODY_CLEAN
-          EOF
+          # Append cleaned body safely
+          printf "%s\n" "$BODY_CLEAN" >> "$FILENAME"
 
       - name: Commit and push
         run: |
