@@ -4,6 +4,9 @@ on:
   issues:
     types: [opened]
 
+permissions:
+  contents: write
+
 jobs:
   create-project-folder:
     runs-on: ubuntu-latest
