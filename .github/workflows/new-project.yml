@@ -1,0 +1,35 @@
+name: Create folder for new research project
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  create-project-folder:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create docs folder and README
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+
+          # Make directory for the research project
+          mkdir -p docs/$ISSUE_NUMBER
+
+          # Create a README.md with issue reference
+          echo "# Research Project $ISSUE_NUMBER" > docs/$ISSUE_NUMBER/README.md
+          echo "" >> docs/$ISSUE_NUMBER/README.md
+          echo "👉 See original discussion in issue #$ISSUE_NUMBER" >> docs/$ISSUE_NUMBER/README.md
+
+      - name: Commit and push changes
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          git config user.name "github-actions[bot]"
+          git add docs/$ISSUE_NUMBER/README.md
+          git commit -m "Add docs folder for research project #$ISSUE_NUMBER"
+          git push
