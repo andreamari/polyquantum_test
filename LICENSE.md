@@ -30,7 +30,7 @@ To select one of the following licenses, users must specify it at the top of the
 - **CC BY-SA 4.0: Creative Commons Attribution-ShareAlike.** This license allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, so long as attribution is given to the creator. The license allows for commercial use. If you remix, adapt, or build upon the material, you must license the modified material under identical terms.
 
 This is the same licence used by [Wikipedia](https://www.wikipedia.org/). 
-In practice, you are free to fork/copy the structure of this repository. For example, you are welcome to create:
+In practice, you are free to copy and modify the structure of this repository. For example, you are welcome to create:
 - A better Polyquantum project
 - A new Polychemistry project
 - A new Polybio project
