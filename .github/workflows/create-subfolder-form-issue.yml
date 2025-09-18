@@ -25,7 +25,7 @@ jobs:
           mkdir -p docs/$ISSUE_NUMBER
 
           # Create a README.md associated to the issue
-          echo "# Research Project $ISSUE_NUMBER: ${{ github.event.issue.title }}" > docs/$ISSUE_NUMBER/README.md
+          echo "# Polyquantum $ISSUE_NUMBER: ${{ github.event.issue.title }}" > docs/$ISSUE_NUMBER/README.md
           echo "" >> docs/$ISSUE_NUMBER/README.md
           echo "Here you can find all the version-controlled Markdown documents associated with this project." >> docs/$ISSUE_NUMBER/README.md
           echo "- For the full discussion, see the **original issue** $REPO#$ISSUE_NUMBER." >> docs/$ISSUE_NUMBER/README.md
