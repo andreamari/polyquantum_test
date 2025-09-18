@@ -13,7 +13,7 @@ This is the same licence recommended by the [ArXiv](https://arxiv.org/licenses/n
 
 ## Alternative licenses (require explicit reference in contributed documents)
 
-To select one of the following licenses, users must specify it at the top of their Markdown documents.
+To select one of the following licenses, users must specify it at the top of their contributed content.
 
 - **CC BY 4.0: Creative Commons Attribution.** This license allows reusers to distribute, remix, adapt, and build upon the material in any medium or format, so long as attribution is given to the creator. The license allows for commercial use.
 
