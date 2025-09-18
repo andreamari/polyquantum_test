@@ -30,8 +30,8 @@ jobs:
           echo "Here you can find all the version-controlled Markdown documents associated with this project." >> docs/$ISSUE_NUMBER/README.md
           echo "- For the full discussion, see the **original issue** $REPO#$ISSUE_NUMBER." >> docs/$ISSUE_NUMBER/README.md
           echo "- To **view** an existing document, just click on the file name." >> docs/$ISSUE_NUMBER/README.md
-          echo "- To **add** a new document, click the _Add file_ button at the top right and follow [this guide](/../README.md)." >> docs/$ISSUE_NUMBER/README.md
-          echo "- To **edit** an existing document, first click on the file name, then click the (_Edit_) (✏️) button at the top right and follow [this guide](/../README.md)." >> docs/$ISSUE_NUMBER/README.md
+          echo "- To **add** a new document, click the _Add file_ button at the top right and follow [this guide](../README.md)." >> docs/$ISSUE_NUMBER/README.md
+          echo "- To **edit** an existing document, first click on the file name, then click the (_Edit_) (✏️) button at the top right and follow [this guide](../README.md)." >> docs/$ISSUE_NUMBER/README.md
 
       - name: Commit and push changes
         run: |
