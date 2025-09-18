@@ -1,108 +1,125 @@
 name: Save Issues and Comments
 
+
 on:
-  issues:
-    types: [opened, edited]
-  issue_comment:
-    types: [created, edited]
+issues:
+types: [opened, edited]
+issue_comment:
+types: [created, edited]
+
 
 jobs:
-  save-to-markdown:
-    if: |
-      contains(github.event.issue.body || '', '@save-to-new-file') ||
-      contains(github.event.issue.body || '', '@save-to-last-file') ||
-      contains(github.event.comment.body || '', '@save-to-new-file') ||
-      contains(github.event.comment.body || '', '@save-to-last-file')
-    runs-on: ubuntu-latest
-    steps:
-      - name: Extract content
-        id: extract
-        run: |
-          echo "event_name=${{ github.event_name }}" >> $GITHUB_OUTPUT
-          echo "issue_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
+save-to-markdown:
+if: |
+contains(github.event.issue.body || '', '@save-to-new-file') ||
+contains(github.event.issue.body || '', '@save-to-last-file') ||
+contains(github.event.comment.body || '', '@save-to-new-file') ||
+contains(github.event.comment.body || '', '@save-to-last-file')
+runs-on: ubuntu-latest
+steps:
+- name: Extract content
+id: extract
+run: |
+echo "event_name=${{ github.event_name }}" >> $GITHUB_OUTPUT
+echo "issue_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
 
-          if [[ "${{ github.event_name }}" == "issues" ]]; then
-            content="${{ github.event.issue.body }}"
-            title="${{ github.event.issue.title }}"
-          else
-            content="${{ github.event.comment.body }}"
-            title=""
-          fi
 
-          echo "content<<EOF" >> $GITHUB_OUTPUT
-          echo "$content" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+if [[ "${{ github.event_name }}" == "issues" ]]; then
+content="${{ github.event.issue.body }}"
+title="${{ github.event.issue.title }}"
+else
+content="${{ github.event.comment.body }}"
+title=""
+fi
 
-          echo "title<<EOF" >> $GITHUB_OUTPUT
-          echo "$title" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
 
-      - name: Check for triggers
-        id: check
-        run: |
-          content="${{ steps.extract.outputs.content }}"
-          if echo "$content" | grep -q "@save-to-new-file"; then
-            echo "trigger=new" >> $GITHUB_OUTPUT
-          elif echo "$content" | grep -q "@save-to-last-file"; then
-            echo "trigger=last" >> $GITHUB_OUTPUT
-          else
-            echo "trigger=none" >> $GITHUB_OUTPUT
+delimiter=$(uuidgen)
+echo "content<<$delimiter" >> $GITHUB_OUTPUT
+echo "$content" >> $GITHUB_OUTPUT
+echo "$delimiter" >> $GITHUB_OUTPUT
 
-      - name: Checkout repository
-        uses: actions/checkout@v3
 
-      - name: Set up environment
-        run: |
-          mkdir -p docs
+delimiter=$(uuidgen)
+echo "title<<$delimiter" >> $GITHUB_OUTPUT
+echo "$title" >> $GITHUB_OUTPUT
+echo "$delimiter" >> $GITHUB_OUTPUT
 
-      - name: Process trigger
-        id: process
-        run: |
-          issue_number=${{ steps.extract.outputs.issue_number }}
-          content="${{ steps.extract.outputs.content }}"
-          title="${{ steps.extract.outputs.title }}"
-          trigger=${{ steps.check.outputs.trigger }}
 
-          # Remove trigger keywords from content
-          content=$(echo "$content" | sed 's/@save-to-new-file//g' | sed 's/@save-to-last-file//g')
+- name: Check for triggers
+id: check
+run: |
+content="${{ steps.extract.outputs.content }}"
+if echo "$content" | grep -q "@save-to-new-file"; then
+echo "trigger=new" >> $GITHUB_OUTPUT
+elif echo "$content" | grep -q "@save-to-last-file"; then
+echo "trigger=last" >> $GITHUB_OUTPUT
+else
+echo "trigger=none" >> $GITHUB_OUTPUT
 
-          mkdir -p docs/$issue_number
-          cd docs/$issue_number
 
-          if [ "$trigger" = "new" ]; then
-            last_index=$(ls -1 [0-9]*-autosaved_comment.md 2>/dev/null | sed 's/-.*//' | sort -n | tail -1)
-            if [ -z "$last_index" ]; then
-              index=1
-            else
-              index=$((last_index+1))
-            fi
-            filename="${index}-autosaved_comment.md"
-          elif [ "$trigger" = "last" ]; then
-            last_index=$(ls -1 [0-9]*-autosaved_comment.md 2>/dev/null | sed 's/-.*//' | sort -n | tail -1)
-            if [ -z "$last_index" ]; then
-              index=1
-            else
-              index=$last_index
-            fi
-            filename="${index}-autosaved_comment.md"
-          fi
+- name: Checkout repository
+uses: actions/checkout@v3
 
-          echo "filename=$filename" >> $GITHUB_OUTPUT
 
-          # Write to file safely (preserve LaTeX and special chars)
-          {
-            if [ -n "$title" ]; then
-              echo "# $title"
-              echo ""
-            fi
-            echo "$content"
-          } > "$filename"
+- name: Set up environment
+run: |
+mkdir -p docs
 
-      - name: Commit and push changes
-        if: steps.process.outputs.filename != ''
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/
-          git commit -m "Autosave issue/comment #${{ steps.extract.outputs.issue_number }} to ${{ steps.process.outputs.filename }}" || echo "No changes to commit"
-          git push
+
+- name: Process trigger
+id: process
+run: |
+issue_number=${{ steps.extract.outputs.issue_number }}
+content="${{ steps.extract.outputs.content }}"
+title="${{ steps.extract.outputs.title }}"
+trigger=${{ steps.check.outputs.trigger }}
+
+
+# Remove trigger keywords from content
+content=$(echo "$content" | sed 's/@save-to-new-file//g' | sed 's/@save-to-last-file//g')
+
+
+mkdir -p docs/$issue_number
+cd docs/$issue_number
+
+
+if [ "$trigger" = "new" ]; then
+last_index=$(ls -1 [0-9]*-autosaved_comment.md 2>/dev/null | sed 's/-.*//' | sort -n | tail -1)
+if [ -z "$last_index" ]; then
+index=1
+else
+index=$((last_index+1))
+fi
+filename="${index}-autosaved_comment.md"
+elif [ "$trigger" = "last" ]; then
+last_index=$(ls -1 [0-9]*-autosaved_comment.md 2>/dev/null | sed 's/-.*//' | sort -n | tail -1)
+if [ -z "$last_index" ]; then
+index=1
+else
+index=$last_index
+fi
+filename="${index}-autosaved_comment.md"
+fi
+
+
+echo "filename=$filename" >> $GITHUB_OUTPUT
+
+
+# Write to file safely (preserve LaTeX and special chars)
+{
+if [ -n "$title" ]; then
+echo "# $title"
+echo ""
+fi
+echo "$content"
+} > "$filename"
+
+
+- name: Commit and push changes
+if: steps.process.outputs.filename != ''
+run: |
+git config user.name "github-actions[bot]"
+git config user.email "github-actions[bot]@users.noreply.github.com"
+git add docs/
+git commit -m "Autosave issue/comment #${{ steps.extract.outputs.issue_number }} to ${{ steps.process.outputs.filename }}" || echo "No changes to commit"
+git push
