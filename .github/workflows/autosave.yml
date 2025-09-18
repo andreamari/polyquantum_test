@@ -103,12 +103,17 @@ jobs:
 
           echo "filename=$filename" >> $GITHUB_OUTPUT
 
-          # Write the file preserving content (use printf to avoid echo escaping)
+          # Write to file safely preserving LaTeX / special characters
           if [ -n "$title" ]; then
-            printf '# %s\n\n' "$title" > "$filename"
-            printf '%s\n' "$content" >> "$filename"
+            echo "# $title" > "$filename"
+            echo "" >> "$filename"
+            cat <<'EOF' >> "$filename"
+          $content
+          EOF
           else
-            printf '%s\n' "$content" > "$filename"
+            cat <<'EOF' > "$filename"
+          $content
+          EOF
           fi
 
       - name: Commit and push changes
