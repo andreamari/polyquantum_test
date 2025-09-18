@@ -109,7 +109,7 @@ jobs:
             echo "" >> "$filename"
           fi
           
-          # Append content literally without losing $ or \
+          # Append LaTeX content safely
           printf '%s\n' "$content" >> "$filename"
 
       - name: Commit and push changes
