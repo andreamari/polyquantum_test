@@ -103,18 +103,14 @@ jobs:
 
           echo "filename=$filename" >> $GITHUB_OUTPUT
 
-          # Write to file safely preserving LaTeX / special characters
+          # Write file safely preserving LaTeX
           if [ -n "$title" ]; then
             echo "# $title" > "$filename"
             echo "" >> "$filename"
-            cat <<'EOF' >> "$filename"
-          $content
-          EOF
-          else
-            cat <<'EOF' > "$filename"
-          $content
-          EOF
           fi
+          
+          # Append content literally without losing $ or \
+          printf '%s\n' "$content" >> "$filename"
 
       - name: Commit and push changes
         if: ${{ steps.process.outputs.filename != '' }}
