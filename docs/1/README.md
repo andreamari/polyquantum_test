@@ -1,4 +1,4 @@
-# Research Project 1: Can Quantum Mechanical Description of Physical Reality Be Considered Complete?
+# Polyquantum 1: Can Quantum Mechanical Description of Physical Reality Be Considered Complete?
 
 Here you can find all the version-controlled Markdown documents associated with this project.
 - For the full discussion, see the **original issue** andreamari/polyquantum_test#1.
