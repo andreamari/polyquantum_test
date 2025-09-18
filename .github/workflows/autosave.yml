@@ -10,21 +10,17 @@ types: [created, edited]
 
 jobs:
 save-to-markdown:
-if: |
-contains(github.event.issue.body || '', '@save-to-new-file') ||
-contains(github.event.issue.body || '', '@save-to-last-file') ||
-contains(github.event.comment.body || '', '@save-to-new-file') ||
-contains(github.event.comment.body || '', '@save-to-last-file')
 runs-on: ubuntu-latest
 steps:
 - name: Extract content
 id: extract
+shell: bash
 run: |
 echo "event_name=${{ github.event_name }}" >> $GITHUB_OUTPUT
 echo "issue_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
 
 
-if [[ "${{ github.event_name }}" == "issues" ]]; then
+if [ "${{ github.event_name }}" = "issues" ]; then
 content="${{ github.event.issue.body }}"
 title="${{ github.event.issue.title }}"
 else
@@ -33,6 +29,7 @@ title=""
 fi
 
 
+# Use a unique delimiter so the body cannot accidentally close the heredoc
 delimiter=$(uuidgen)
 echo "content<<$delimiter" >> $GITHUB_OUTPUT
 echo "$content" >> $GITHUB_OUTPUT
@@ -47,6 +44,7 @@ echo "$delimiter" >> $GITHUB_OUTPUT
 
 - name: Check for triggers
 id: check
+shell: bash
 run: |
 content="${{ steps.extract.outputs.content }}"
 if echo "$content" | grep -q "@save-to-new-file"; then
@@ -55,19 +53,25 @@ elif echo "$content" | grep -q "@save-to-last-file"; then
 echo "trigger=last" >> $GITHUB_OUTPUT
 else
 echo "trigger=none" >> $GITHUB_OUTPUT
+fi
+
+
+- name: Stop if no trigger
+if: ${{ steps.check.outputs.trigger == 'none' }}
+run: |
+echo "No trigger found, exiting."
+exit 0
 
 
 - name: Checkout repository
+if: ${{ steps.check.outputs.trigger != 'none' }}
 uses: actions/checkout@v3
 
 
-- name: Set up environment
-run: |
-mkdir -p docs
-
-
 - name: Process trigger
+if: ${{ steps.check.outputs.trigger != 'none' }}
 id: process
+shell: bash
 run: |
 issue_number=${{ steps.extract.outputs.issue_number }}
 content="${{ steps.extract.outputs.content }}"
@@ -75,8 +79,17 @@ title="${{ steps.extract.outputs.title }}"
 trigger=${{ steps.check.outputs.trigger }}
 
 
-# Remove trigger keywords from content
-content=$(echo "$content" | sed 's/@save-to-new-file//g' | sed 's/@save-to-last-file//g')
+# Remove trigger keywords from the content
+content=$(echo "$content" | sed 's/@save-to-new-file//g; s/@save-to-last-file//g')
+
+
+# If content is empty (only triggers / whitespace), don't create a file
+stripped=$(echo "$content" | tr -d '[:space:]')
+if [ -z "$stripped" ]; then
+echo "filename=" >> $GITHUB_OUTPUT
+echo "No non-trigger content to save. Exiting."
+exit 0
+fi
 
 
 mkdir -p docs/$issue_number
@@ -91,35 +104,10 @@ else
 index=$((last_index+1))
 fi
 filename="${index}-autosaved_comment.md"
-elif [ "$trigger" = "last" ]; then
+else
 last_index=$(ls -1 [0-9]*-autosaved_comment.md 2>/dev/null | sed 's/-.*//' | sort -n | tail -1)
 if [ -z "$last_index" ]; then
 index=1
 else
 index=$last_index
 fi
-filename="${index}-autosaved_comment.md"
-fi
-
-
-echo "filename=$filename" >> $GITHUB_OUTPUT
-
-
-# Write to file safely (preserve LaTeX and special chars)
-{
-if [ -n "$title" ]; then
-echo "# $title"
-echo ""
-fi
-echo "$content"
-} > "$filename"
-
-
-- name: Commit and push changes
-if: steps.process.outputs.filename != ''
-run: |
-git config user.name "github-actions[bot]"
-git config user.email "github-actions[bot]@users.noreply.github.com"
-git add docs/
-git commit -m "Autosave issue/comment #${{ steps.extract.outputs.issue_number }} to ${{ steps.process.outputs.filename }}" || echo "No changes to commit"
-git push
