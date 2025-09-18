@@ -1,4 +1,4 @@
-# Research Project 23: blabla
+# Polyquantum 23: blabla
 
 Here you can find all the version-controlled Markdown documents associated with this project.
 - For the full discussion, see the **original issue** andreamari/polyquantum_test#23.
