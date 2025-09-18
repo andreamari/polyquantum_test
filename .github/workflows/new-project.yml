@@ -1,8 +1,8 @@
-name: Create a subfolder and a README.md associated with a new issue
+name: Create subfolder and README.md in docs associated with a new issue
 
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
 
 permissions:
   contents: write
@@ -25,7 +25,8 @@ jobs:
           mkdir -p docs/$ISSUE_NUMBER
 
           # Create a README.md with issue reference
-          echo "# Research Project $ISSUE_NUMBER" > docs/$ISSUE_NUMBER/README.md
+          echo "# Research Project $ISSUE_NUMBER:" > docs/$ISSUE_NUMBER/README.md
+          echo "${{ github.event.issue.title }}" >> docs/$ISSUE_NUMBER/README.md
           echo "" >> docs/$ISSUE_NUMBER/README.md
           echo "👉 See original discussion in issue $REPO#$ISSUE_NUMBER" >> docs/$ISSUE_NUMBER/README.md
 
@@ -35,5 +36,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/$ISSUE_NUMBER/README.md
-          git commit -m "Add docs subfolder and README for issue #$ISSUE_NUMBER"
+          git commit -m "Add docs subfolder and docs/$ISSUE_NUMBER/README.md"
           git push
