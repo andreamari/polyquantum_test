@@ -12,7 +12,6 @@ jobs:
     steps:
       - name: Extract content
         id: extract
-        shell: bash
         run: |
           echo "event_name=${{ github.event_name }}" >> $GITHUB_OUTPUT
           echo "issue_number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
@@ -38,7 +37,6 @@ jobs:
 
       - name: Check for triggers
         id: check
-        shell: bash
         run: |
           content="${{ steps.extract.outputs.content }}"
           if echo "$content" | grep -q "@save-to-new-file"; then
@@ -62,7 +60,6 @@ jobs:
       - name: Process trigger
         if: ${{ steps.check.outputs.trigger != 'none' }}
         id: process
-        shell: bash
         run: |
           issue_number=${{ steps.extract.outputs.issue_number }}
           content="${{ steps.extract.outputs.content }}"
