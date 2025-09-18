@@ -30,7 +30,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
      ```
    - In every document, include author(s) and affiliation(s). 
    - The new document can be referenced as: _Polyquantum 1.3 (2025)_, corresponding in this example to Issue #1, document #3.  
-4. Open a _pull request_ to merge your contribution. Once reviewed and accepted, your file will appear in `docs/[NUM_ISSUE]/`.
+4. Open a _pull request_ to merge your contribution. Once reviewed, if accepted, your file will appear in `docs/[NUM_ISSUE]/`.
 
 
 ## 💡 How to share a new research idea
@@ -44,7 +44,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
    - The new idea can be referenced as:  
       - Whole research project: `Polyquantum 1 (2025)`.
       - Specific first document: `Polyquantum 1.1 (2025)`. 
-3. Open a _pull request_ to merge your contribution. Once reviewed and accepted, your file will appear in `docs/[NUM_ISSUE]/`.
+3. Open a _pull request_ to merge your contribution. Once reviewed, if accepted, your file will appear in `docs/[NUM_ISSUE]/`.
 
 
 ## Usage of Issues vs. Markdown files
