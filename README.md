@@ -24,7 +24,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
      ```
    - In every document, include author(s) and affiliation(s).
 4. If accepted, the new (or modified) file will be published in `docs/[NUM_ISSUE]/` and permanently tracked by the Git system.
-5. The document can be referenced as: _Authors_, _Polyquantum 1.3 (2025)_. Corresponding, in this example, to issue #1, document #3, created in 2025.  
+5. The document can be referenced as _Authors_, _Polyquantum 1.3 (2025)_ corresponding, in this example, to issue #1, document #3, created in 2025.  
 
 
 
