@@ -3,13 +3,13 @@ _Open, collaborative, version-controlled research in quantum science_
 
 ## About
 _Polyquantum_ is an open platform for collaborative research in quantum science, structured as a GitHub repository.  
-It allows researchers to:
+It enables researchers to:
 
 - 💡 Share new research ideas openly  
 - 🛠️ Collaborate on ongoing projects proposed by others  
 - 📝 Preserve and track research contributions transparently  
 
-A key feature of Polyquantum is the transparent tracking of authorship.  
+A core feature of Polyquantum is the transparent tracking of authorship.  
 By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed version control, every research step is permanently recorded in Markdown documents, ensuring proper recognition of contributors.  
 
 👉 More details about Polyquantum can be found in [ABOUT.md](ABOUT.md).
@@ -44,9 +44,9 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
     - _Authors_, _Polyquantum 1.1 (2025)_ corresponding, in this example, to project #1, specific document #1, created in 2025.
 
 ## Usage of Issues vs. Markdown files
-- **Issues** are optimal for brainstorming, discussions, and quick comments. Authorship of contributions is not tracked by Git (it's similar to posting in a blog or social media).
-- **Markdown files** are for more refined ideas/solutions/calculations that are worth preserving as a permanent record in the Git history. Such files are referenced, tracked, and version-controlled. Authorship of contributions is permanently preserved by the Git system (it's similar to posting in the [arXiv](https://en.wikipedia.org/wiki/ArXiv) repository).
+- **Issues** are optimal for brainstorming, discussions, and quick comments. Authorship is not tracked by Git (similar to blog or social media posts).
+- **Markdown files** are for more refined ideas/solutions/calculations worth preserving as a permanent record in the Git history. Such files are referenced, tracked, and version-controlled. Authorship is permanently preserved (similar to publishing on the [arXiv](https://en.wikipedia.org/wiki/ArXiv) repository).
 
 ## License
-👉 Your contribution and the structure of this repository are licensed according to the [LICENSE.md](LICENSE.md) document.
+👉 Contributions and the structure of this repository are licensed under the terms described in [LICENSE.md](LICENSE.md).
 
