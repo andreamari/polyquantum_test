@@ -18,26 +18,26 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 1. Browse the [**Issues** section](https://github.com/andreamari/polyquantum_test/issues) to see existing research ideas/projects/problems.  
 2. Interact and discuss by commenting on specific issues.  
 3. To contribute original material (ideas, solutions, calculations, etc.) that is worth preserving in a (Git-tracked) document:  
-   - 👉 Follow [this guide](docs/README.md) to create or edit a Markdown file in the subfolder `/docs/[NUM_ISSUE]/`.  E.g (for issue #1) :
+   - 👉 Follow [this guide](docs/README.md) to create or edit a Markdown file in the subfolder `/docs/[ISSUE_NUMBER]/`.  E.g (for issue #1) :
      ```
      /docs/1/3-alternative-solution.md
      ```
    - In the document, add (or update) author(s) and affiliation(s).
-4. If accepted, the new (or modified) document will be published in `/docs/[NUM_ISSUE]/` and permanently tracked by the Git system.
+4. If accepted, the new (or modified) document will be published in `/docs/[ISSUE_NUMBER]/` and permanently tracked by the Git system.
 5. The document can be referenced as _Authors_, _Polyquantum 1.3 (2025)_ corresponding, in this example, to project #1, document #3, created in 2025.  
 
 
 
 ## 💡 How to share a new research idea/project/problem
 1. Open a [new issue](https://github.com/andreamari/polyquantum_test/issues/new/choose) describing your idea/project/problem.
-2. A new subfolder `/docs/[NUM_ISSUE]/` containing a `README.md` file (referencing your new issue) will be automatically created. 
+2. A new subfolder `/docs/[ISSUE_NUMBER]/` containing a `README.md` file (referencing your new issue) will be automatically created. 
 3. To preserve your idea/project/problem in a (Git-tracked) document:  
-   - 👉 Follow [this guide](docs/README.md) to create a new Markdown file in the subfolder `/docs/[NUM_ISSUE]/`.  E.g (for issue #1) :
+   - 👉 Follow [this guide](docs/README.md) to create a new Markdown file in the subfolder `/docs/[ISSUE_NUMBER]/`.  E.g (for issue #1) :
      ```
      /docs/1/1-is-quantum-theory-complete.md
      ```
    - In the document, add author(s) and affiliation(s).
-4. If accepted, the new document will be published in `/docs/[NUM_ISSUE]/` and permanently tracked by the Git system.
+4. If accepted, the new document will be published in `/docs/[ISSUE_NUMBER]/` and permanently tracked by the Git system.
 5. The new research idea/project/problem can be referenced as:
     - _Polyquantum 1_ (short notation similar to that used for [Polymath](https://en.wikipedia.org/wiki/Polymath_Project) projects);
     - _Authors_, _Polyquantum 1 (2025)_ corresponding, in this example, to project #1 as a whole, created in 2025;
