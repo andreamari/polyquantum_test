@@ -1,8 +1,8 @@
 # Polyquantum Markdown Documents
 
-This folder contains version-controlled Markdown documents that formalize the research ideas developed within **Polyquantum**.
+This folder contains version-controlled Markdown documents that formalize the research ideas developed within _Polyquantum_.
 
-There are many ways to add or modify files on GitHub. However, if you are not familiar with GitHub, we recommend the short guide below. It only requires using the web interface in your browser—no need to clone or download anything to your computer.  
+There are many ways to add or modify files on GitHub. However, if you are not familiar with GitHub, **we recommend the short guide below**. It only requires using the web interface in your browser—no need to clone or download anything to your computer.  
 
 ---
 
