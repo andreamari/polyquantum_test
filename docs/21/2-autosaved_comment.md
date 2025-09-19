@@ -1,3 +1,0 @@
-# Test new issue
-
-$content
