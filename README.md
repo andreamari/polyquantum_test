@@ -39,7 +39,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
    - In the document, add author(s) and affiliation(s).
 4. If accepted, the new document will be published in `/docs/[NUM_ISSUE]/` and permanently tracked by the Git system.
 5. The new research idea/project/problem can be referenced as:
-    - _Polyquantum 1_ (short notation similar to that used by [Polymath](https://en.wikipedia.org/wiki/Polymath_Project) projects);
+    - _Polyquantum 1_ (short notation similar to that used for [Polymath](https://en.wikipedia.org/wiki/Polymath_Project) projects);
     - _Authors_, _Polyquantum 1 (2025)_ corresponding, in this example, to project #1 as a whole, created in 2025;
     - _Authors_, _Polyquantum 1.1 (2025)_ corresponding, in this example, to project #1, specific document #1, created in 2025.
 
