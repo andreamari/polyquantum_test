@@ -14,7 +14,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 
 👉 More details about Polyquantum can be found in [ABOUT.md](ABOUT.md).
 
-## 🛠️ How to contribute to existing ideas
+## 🛠️ How to contribute to existing research ideas/projects/problems
 1. Browse the [**Issues** section](https://github.com/andreamari/polyquantum_test/issues) to see existing research projects.  
 2. Interact and discuss by commenting on specific issues.  
 3. To contribute original material (ideas, solutions, calculations, etc.) that is worth preserving in a (Git-tracked) document:  
@@ -38,7 +38,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
      ```
    - In the document, include author(s) and affiliation(s).
 4. If accepted, the new document will be published in `/docs/[NUM_ISSUE]/` and permanently tracked by the Git system.
-5. The new research project can be referenced as:
+5. The new research idea/project/problem can be referenced as:
     - _Polyquantum 1_ (short notation);
     - _Authors_, _Polyquantum 1 (2025)_ corresponding, in this example, to the whole project #1, created in 2025;
     - _Authors_, _Polyquantum 1.1 (2025)_ corresponding, in this example, to project #1, specific document #1, created in 2025.
