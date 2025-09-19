@@ -17,20 +17,15 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 ## 🛠️ How to contribute to existing ideas
 1. Browse the [**Issues** section](https://github.com/andreamari/polyquantum_test/issues) to see existing research projects.  
 2. Interact and discuss by commenting on specific issues.  
-3. When discussions produce original material (ideas, solutions, calculations, etc.) that is worth preserving in a (Git-tracked) document:  
-   - Create or edit a Markdown file in the subfolder `docs/[NUM_ISSUE]/`.  E.g (for issue #1) :
+3. To contribute original material (ideas, solutions, calculations, etc.) that is worth preserving in a (Git-tracked) document:  
+   - Follow [this guide](docs/README.md) to create or edit a Markdown file in the subfolder `docs/[NUM_ISSUE]/`.  E.g (for issue #1) :
      ```
      /docs/1/3-alternative-solution.md
      ```
-   - Use a progressive number prefix (`1-`, `2-`, `3-` …) in file names for ordering:  
-     ```
-     1-idea.md
-     2-solution.md
-     3-alternative-solution.md
-     ```
    - In every document, include author(s) and affiliation(s). 
-   - The new document can be referenced as: _Polyquantum 1.3 (2025)_, corresponding in this example to Issue #1, document #3.  
-4. Open a _pull request_ to merge your contribution. Once reviewed, if accepted, your file will appear in `docs/[NUM_ISSUE]/`.
+4. If accepted, the new (or modified) file will be published in `docs/[NUM_ISSUE]/` and permanently tracked by the Git system.
+5. The document can be referenced as: _Polyquantum 1.3 (2025)_, corresponding in this example to Issue #1, document #3, created in 2025.  
+
 
 
 ## 💡 How to share a new research idea
