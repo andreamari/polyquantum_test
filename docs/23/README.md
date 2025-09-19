@@ -1,4 +1,4 @@
-# Polyquantum 23: blabla
+# Polyquantum 23: A new reserach idea
 
 Here you can find all the version-controlled Markdown documents associated with this project.
 - For the full discussion, see the **original issue** andreamari/polyquantum_test#23.
