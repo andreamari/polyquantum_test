@@ -24,7 +24,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
      ```
    - In every document, include author(s) and affiliation(s).
 4. If accepted, the new (or modified) document will be published in `/docs/[NUM_ISSUE]/` and permanently tracked by the Git system.
-5. The document can be referenced as _Authors_, _Polyquantum 1.3 (2025)_ corresponding, in this example, to issue #1, document #3, created in 2025.  
+5. The document can be referenced as _Authors_, _Polyquantum 1.3 (2025)_ corresponding, in this example, to project #1, document #3, created in 2025.  
 
 
 
@@ -41,7 +41,7 @@ By using [Git](https://it.wikipedia.org/wiki/Git_(software))’s distributed ver
 5. The new research project can be referenced as:
     - _Polyquantum 1_ (short notation);
     - _Authors_, _Polyquantum 1 (2025)_ corresponding, in this example, to the whole project #1, created in 2025;
-    - _Authors_, _Polyquantum 1.1 (2025)_ corresponding, in this example, to issue #1, specific document #1, created in 2025.
+    - _Authors_, _Polyquantum 1.1 (2025)_ corresponding, in this example, to project #1, specific document #1, created in 2025.
 
 ## Usage of Issues vs. Markdown files
 - **Issues** are optimal for brainstorming, discussions, and quick comments. Authorship of contributions is not tracked by Git (it's similar to posting in a blog or social media).
