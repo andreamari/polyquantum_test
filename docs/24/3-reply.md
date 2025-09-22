@@ -1,5 +1,5 @@
 # [TEMPLATE] Title of your original research contribution
-Write author(s) here, e.g., _A. Alice\
+Write author(s) here, e.g., _A. Alice_\
 Write affiliation(s) here, e.g., _University of Alice_
 
 Write here a **detailed description** of your original **research contribution** to the existing idea/problem/project.  
