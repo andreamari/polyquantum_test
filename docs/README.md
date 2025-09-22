@@ -1,4 +1,4 @@
-# Polyquantum Markdown Documents
+# Polyquantum Markdown documents
 
 This folder contains version-controlled Markdown documents that formalize the research ideas developed within _Polyquantum_.
 
@@ -6,7 +6,7 @@ There are many ways to add or modify files on GitHub. However, if you are not fa
 
 ---
 
-## How to Add a New Markdown Document
+## How to add a new markdown document
 
 1. Navigate to the subfolder corresponding to the Polyquantum project you’d like to contribute to.  
 2. Click the _Add file_ button at the top right.
@@ -32,7 +32,7 @@ There are many ways to add or modify files on GitHub. However, if you are not fa
 16. If accepted, your contribution will be merged into the Polyquantum repository! 🎉
  
 
-## How to Edit an Existing Markdown Document
+## How to edit an existing markdown document
 
 1. Navigate to the subfolder corresponding to the Polyquantum project you’d like to contribute to.  
 2. Click on the name of the document you’d like to edit.  
