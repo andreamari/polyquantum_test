@@ -1,5 +1,3 @@
-## Example of a reply
-
 # On the extended formula proposed by C. Charlie
 _A. Alice_\
 _University of Alice_
