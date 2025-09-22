@@ -25,10 +25,10 @@ $$
 E =  \frac{m_0 c^2}{\sqrt{1 - \left( \frac{v}{c} \right)^2}} ,
 $$
 
-where $m_0$ is the rest mass of the particle.
+where $m_0$ is the rest mass of the particle [^1].
 
-I believe the new formula is interesting and correct. Moreover, in this document, I would like to 
-provide a further formula in which the energy is expressed as a function of the momentum $p$ of the particle
+I believe the new formula is interesting and correct. 
+Moreover, in this document, I would like to give a further formula in which the energy is expressed as a function of the momentum $p$ of the particle
 instead of its velocity $v$.
 
 
@@ -38,7 +38,7 @@ $$
 E = \sqrt{ (m_0 c^2)^2 + (p c)^2 },
 $$
 
-where $m_0$ is the rest mass of the particle [^1].
+where $m_0$ is the rest mass of the particle.
 
 
 ## Link to original issue
