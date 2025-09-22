@@ -39,6 +39,6 @@ where $m_0$ is the rest mass of the particle [^1].
 - Link to the specific [issue comment](https://github.com/andreamari/polyquantum_test/issues/24#issuecomment-3319000544)   (Optional)
 
 
-## How to cite this document
+## How to cite this document (Optional)
 Short reference: _Plyquantum 1.2_.\
 Full reference: _C. Charlie, An extension of the initial formula by Alice and Bob, Polyquantum 1.2, (2025)_.
