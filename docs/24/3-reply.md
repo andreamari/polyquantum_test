@@ -14,17 +14,28 @@ This document is tracked by the Git system and, therefore, authorship is permane
 
 ## Example
 
-# An extension of the initial formula by Alice and Bob
-_C. Charlie_\
-_University of Charlie_
+# On the extended formula proposed by C. Charlie
+_A. Alice_\
+_University of Alice_
 
-The formula $E=mc^2$ proposed by Alice and Bob in [Polyquantum 1.1](1-idea.md) is very interesting.
-In this document, we extend it to moving particles.
-
-We argue that, for a particle moving at velocity $v$, its relativistic energy is given by
+In [Polyquantum 1.1](1-idea.md) B. Bob and I proposed the formula $E=mc^2$.
+In [Polyquantum 1.2](1-contribution.md) C. Charlie extended it to a particle moving at velocity $v$:
 
 $$
 E =  \frac{m_0 c^2}{\sqrt{1 - \left( \frac{v}{c} \right)^2}} ,
+$$
+
+where $m_0$ is the rest mass of the particle.
+
+I believe the new formula is interesting and correct. Moreover, in this document, I would like to 
+provide a further formula in which the energy is expressed as a function of the momentum $p$ of the particle
+instead of its velocity $v$.
+
+
+For a particle moving with linear momentum $p$, its relativistic energy is given by
+
+$$
+E = \sqrt{ (m_0 c^2)^2 + (p c)^2 },
 $$
 
 where $m_0$ is the rest mass of the particle [^1].
