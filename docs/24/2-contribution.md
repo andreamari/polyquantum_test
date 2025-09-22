@@ -37,5 +37,5 @@ This is a link to the original discussion andreamari/polyquantum_test#24.
 [^1]: Charlie, *Another very important paper*, *Physics Journal* 42, 00001 (2025).  
 
 ## How to cite this document
-Short reference: _Plyquantum 1.2_.
-Full reference: C. Charlie, _An extension of the initial formula by Alice and Bob_, Polyquantum 1.2, (2025).
+Short reference: _Plyquantum 1.2_.\
+Full reference: _C. Charlie, An extension of the initial formula by Alice and Bob, Polyquantum 1.2, (2025)_.
