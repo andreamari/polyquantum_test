@@ -43,4 +43,5 @@ The approach of Polyquantum is explicitly inspired by methodologies and tools fr
 - transparent and traceable authorship.  
 
 ## Aknowledgemnts
-I acknowledge Nathan Shammah and Will Zeng for discussions on the initial idea of Polyquantum back in 2020 and for the opportunity to pitch it with a lightning talk at [UnitaryCON 2023](https://unitary.foundation/community/2023/unitaryCON/).
+I acknowledge Nathan Shammah and Will Zeng for discussions on the initial idea of Polyquantum back in 2020 and for the opportunity to pitch it with a lightning talk at [UnitaryCON 2023](https://unitary.foundation/community/2023/unitaryCON/). I also thank Stefano Zippilli, Arturo Arvizu for their help in testing and improving the structure of this repository.
+
