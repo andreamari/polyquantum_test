@@ -1,6 +1,6 @@
 # [TEMPLATE] Title of your original research contribution
-Write author(s) here, e.g., _C. Charlie_\
-Write affiliation(s) here, e.g., _University of Charlie_
+Write author(s) here, e.g., _A. Alice\
+Write affiliation(s) here, e.g., _University of Alice_
 
 Write here a **detailed description** of your original **research contribution** to the existing idea/problem/project.  
 This document is tracked by the Git system and, therefore, authorship is permanently preserved.   
