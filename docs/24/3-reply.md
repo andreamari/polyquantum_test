@@ -1,18 +1,4 @@
-# [TEMPLATE] Title of your original research contribution
-Write author(s) here, e.g., _A. Alice_\
-Write affiliation(s) here, e.g., _University of Alice_
-
-Write here a **detailed description** of your original **research contribution** to the existing idea/problem/project.  
-This document is tracked by the Git system and, therefore, authorship is permanently preserved.   
-
-- Click on the **Preview** tab above to see how your text will appear.
-- Use `#`, `##`, `###`, for title, sections, subsections, etc..
-- Use `$...$` for inline LaTeX equations.  
-- Use `$$...$$` for block LaTeX equations.  
-- You can use [footnotes](https://www.markdownguide.org/extended-syntax/#footnotes) for references.  
-- For more commands, see this [cheat sheet](https://www.markdownguide.org/cheat-sheet/).  
-
-## Example
+## Example of a reply
 
 # On the extended formula proposed by C. Charlie
 _A. Alice_\
