@@ -43,6 +43,7 @@ where $m_0$ is the rest mass of the particle.
 
 ## Link to original issue
 
-This is a link to the original discussion andreamari/polyquantum_test#24.
+- Link to the original issue andreamari/polyquantum_test#24. (Recommended)
+- Link to the specific [issue comment](https://github.com/andreamari/polyquantum_test/issues/24#issuecomment-3319000544)   (Optional)
 
 [^1]: Charlie, *Another very important paper*, *Physics Journal* 42, 00001 (2025).
