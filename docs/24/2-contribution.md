@@ -29,8 +29,8 @@ $$
 
 where $m_0$ is the rest mass of the particle [^1].
 
-## References
 [^1]: Charlie, *Another very important paper*, *Physics Journal* 42, 00001 (2025).  
+
 
 
 ## Link to original issue
