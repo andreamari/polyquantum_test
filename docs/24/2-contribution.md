@@ -2,7 +2,7 @@
 Write author(s) here, e.g., _C. Charlie_\
 Write affiliation(s) here, e.g., _University of Charlie_
 
-Write here a **detailed description** of your new **research contribution**.  
+Write here a **detailed description** of your original **research contribution** to the existing idea/problem/project.  
 This document is tracked by the Git system and, therefore, authorship is permanently preserved.   
 
 - Click on the **Preview** tab above to see how your text will appear.
