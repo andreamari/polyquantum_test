@@ -1,6 +1,6 @@
 # FOR THE TRUE POLYQUANTUM [CLICK HERE](https://github.com/andreamari/polyquantum)
 
-**⚠️⚠️⚠️⚠️THIS REPOSITORY WAS CREATED FOR TESTING AND WILL BE CLOSED SOON⚠️⚠️⚠️⚠️⚠️**
+**⚠️⚠️⚠️⚠️THIS REPOSITORY WAS CREATED FOR TESTING AND IS NOW DEPRECATED⚠️⚠️⚠️⚠️⚠️**
 
 # Polyquantum_test 
 _Open, collaborative, version-controlled research in quantum science_.
