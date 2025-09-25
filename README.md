@@ -1,4 +1,8 @@
-# Polyquantum
+# FOR THE TRUE POLYQUANTUM [CLICK HERE](https://github.com/andreamari/polyquantum)
+
+**⚠️⚠️⚠️⚠️THIS REPOSITORY WAS CREATED FOR TESTING AND WILL BE CLOSED SOON⚠️⚠️⚠️⚠️⚠️**
+
+# Polyquantum_test 
 _Open, collaborative, version-controlled research in quantum science_.
 
 ## About
