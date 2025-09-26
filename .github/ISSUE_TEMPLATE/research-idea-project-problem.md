@@ -1,5 +1,5 @@
 ---
-name: Research idea/project/problem
+name: Template for a new research idea/project/problem
 about: Title of your new reserach idea/project/problem
 title: ''
 labels: ''
